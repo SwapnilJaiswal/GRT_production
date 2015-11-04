@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ROOT</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>PrjctStatus</param-name>
+    <param-value>Project Status</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Fiscal</param-name>
+    <param-value>Fiscal</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ChangingGDC</param-name>
+    <param-value>Reason For Not Following Auto Routing</param-value>
+  </context-param>
+  <context-param>
+    <param-name>JiraID</param-name>
+    <param-value>JIRA ID</param-value>
+  </context-param>
+  <context-param>
+    <param-name>PIDNumber</param-name>
+    <param-value>PID Number</param-value>
+  </context-param>
+  <context-param>
+    <param-name>RequestedBy</param-name>
+    <param-value>Requested By</param-value>
+  </context-param>
+  <context-param>
+    <param-name>NoOfDelivery</param-name>
+    <param-value>No Of Deliverables</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ArchTeam</param-name>
+    <param-value>Arch Team</param-value>
+  </context-param>
+  <context-param>
+    <param-name>SubTeam</param-name>
+    <param-value>Sub Team</param-value>
+  </context-param>
+  <context-param>
+    <param-name>GSPManager</param-name>
+    <param-value>GSP Manager</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Assignee</param-name>
+    <param-value>Assignee(s)</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Customer</param-name>
+    <param-value>Customer</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Theatre</param-name>
+    <param-value>Theatre</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ASType</param-name>
+    <param-value>AS-S/AS-T/AS-F/CAP</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Type</param-name>
+    <param-value>Type</param-value>
+  </context-param>
+  <context-param>
+    <param-name>PrjClassification</param-name>
+    <param-value>Project Classification</param-value>
+  </context-param>
+  <context-param>
+    <param-name>JiraCreatedBy</param-name>
+    <param-value>JIRA Created by</param-value>
+  </context-param>
+  <context-param>
+    <param-name>CreatedBy</param-name>
+    <param-value>Created by</param-value>
+  </context-param>
+  <context-param>
+    <param-name>RequestRecvDate</param-name>
+    <param-value>Request Recv Date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ModeReqRecv</param-name>
+    <param-value>Mode of Request Recv</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ReqAckDate</param-name>
+    <param-value>Request Ack Date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>JiraCreateDate</param-name>
+    <param-value>JIRA Create Date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>JiraAckDate</param-name>
+    <param-value>JIRA Ack Date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ResourceAsgnDate</param-name>
+    <param-value>Resource Assign Date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>OnsiteInfo</param-name>
+    <param-value>Onsite/Remote/FIFO</param-value>
+  </context-param>
+  <context-param>
+    <param-name>VisaWrkPermit</param-name>
+    <param-value>VISA (Work Permit / Buisness VISA)</param-value>
+  </context-param>
+  <context-param>
+    <param-name>VisaAvailability</param-name>
+    <param-value>VISA (Available / Not Available</param-value>
+  </context-param>
+  <context-param>
+    <param-name>FulfilmentDate</param-name>
+    <param-value>Fulfilment date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>PrjctStartDate</param-name>
+    <param-value>Project Start Date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ActStartDate</param-name>
+    <param-value>Actual Start Date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>PrjctEndDate</param-name>
+    <param-value>Project End Date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ActEndDate</param-name>
+    <param-value>Actual End Date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>term</param-name>
+    <param-value>Long Term/Short Term</param-value>
+  </context-param>
+  <context-param>
+    <param-name>SLABreeches</param-name>
+    <param-value>SLA Breaches (in hrs)</param-value>
+  </context-param>
+  <context-param>
+    <param-name>PrjctDeclineLineReasons</param-name>
+    <param-value>Project Decline Reasons</param-value>
+  </context-param>
+  <context-param>
+    <param-name>RiskCode</param-name>
+    <param-value>Risk Code (From Risk Catalouge)</param-value>
+  </context-param>
+  <context-param>
+    <param-name>PPA</param-name>
+    <param-value>PPA (Post Project Analysis)</param-value>
+  </context-param>
+  <context-param>
+    <param-name>InterGDCAssignee</param-name>
+    <param-value>Inter GDC Assignee(s)</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ReqTransferedtoGDC</param-name>
+    <param-value>Request Transferred to Inter GDC</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ReqTransferedfromGDC</param-name>
+    <param-value>Request Transferred from Inter GDC</param-value>
+  </context-param>
+  <context-param>
+    <param-name>TransferReason</param-name>
+    <param-value>Transfer Reason</param-value>
+  </context-param>
+  <context-param>
+    <param-name>SpecialSkills</param-name>
+    <param-value>Special Skills</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Remarks</param-name>
+    <param-value>Remarks</param-value>
+  </context-param>
+  <context-param>
+    <param-name>UpdatedBy</param-name>
+    <param-value>Updated By</param-value>
+  </context-param>
+  <context-param>
+    <param-name>SNo</param-name>
+    <param-value>Serial No.</param-value>
+  </context-param>
+  <context-param>
+    <param-name>status</param-name>
+    <param-value> Record Status</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ServiceCatID</param-name>
+    <param-value>ServiceCatlogueID</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Language</param-name>
+    <param-value>Language Requirements</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Timezone</param-name>
+    <param-value>Time Zone</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Regulatory</param-name>
+    <param-value>Regulatory Requirements</param-value>
+  </context-param>
+  <context-param>
+    <param-name>TimezoneReq</param-name>
+    <param-value>Timezone Requirements</param-value>
+  </context-param>
+  <context-param>
+    <param-name>GDC</param-name>
+    <param-value>GDC</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Region</param-name>
+    <param-value>Region</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Timestamp</param-name>
+    <param-value>Time - stamp </param-value>
+  </context-param>
+  <context-param>
+    <param-name>attachments</param-name>
+    <param-value>attachments </param-value>
+  </context-param>
+  <context-param>
+    <param-name>NPTrack</param-name>
+    <param-value>NP Info </param-value>
+  </context-param>
+  <context-param>
+    <param-name>DUID</param-name>
+    <param-value>DUID</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Pid</param-name>
+    <param-value>PID</param-value>
+  </context-param>
+  <context-param>
+    <param-name>NPDeliverableType</param-name>
+    <param-value>NPDeliverableType</param-value>
+  </context-param>
+  <context-param>
+    <param-name>SORADeliverableType</param-name>
+    <param-value>SORADeliverableType</param-value>
+  </context-param>
+  <context-param>
+    <param-name>CNADeliverableType</param-name>
+    <param-value>CNADeliverableType</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Task</param-name>
+    <param-value>Task</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DesignServicesDeliverableType</param-name>
+    <param-value>DesignServicesDeliverableType</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DeploymentServicesDeliverableType</param-name>
+    <param-value>DeploymentServicesDeliverableType</param-value>
+  </context-param>
+  <context-param>
+    <param-name>OtherDeliverablesDeliverableType</param-name>
+    <param-value>OtherDeliverablesDeliverableType</param-value>
+  </context-param>
+  <context-param>
+    <param-name>SORADeliveryCategory</param-name>
+    <param-value>SORADeliveryCategory</param-value>
+  </context-param>
+  <context-param>
+    <param-name>BugSeverity</param-name>
+    <param-value>Bug-Severity </param-value>
+  </context-param>
+  <context-param>
+    <param-name>SORAURL</param-name>
+    <param-value>SORAURL </param-value>
+  </context-param>
+  <context-param>
+    <param-name>FinalBugCount</param-name>
+    <param-value>FinalBugCount </param-value>
+  </context-param>
+  <context-param>
+    <param-name>InitialBugCount</param-name>
+    <param-value>InitialBugCount </param-value>
+  </context-param>
+  <context-param>
+    <param-name>SoftwareRelease</param-name>
+    <param-value>SoftwareRelease </param-value>
+  </context-param>
+  <context-param>
+    <param-name>CapId</param-name>
+    <param-value>CapId </param-value>
+  </context-param>
+  <context-param>
+    <param-name>DeliveryModel</param-name>
+    <param-value>DeliveryModel </param-value>
+  </context-param>
+  <context-param>
+    <param-name>DeliverableClassification</param-name>
+    <param-value>DeliverableClassification </param-value>
+  </context-param>
+  <context-param>
+    <param-name>ScheduledDate</param-name>
+    <param-value>ScheduledDate </param-value>
+  </context-param>
+  <context-param>
+    <param-name>AccountNCEName</param-name>
+    <param-value>Account NCE Name </param-value>
+  </context-param>
+  <context-param>
+    <param-name>AuditType</param-name>
+    <param-value>Audit Delivery Type </param-value>
+  </context-param>
+  <context-param>
+    <param-name>AccountName</param-name>
+    <param-value>AccountName </param-value>
+  </context-param>
+  <context-param>
+    <param-name>ServiceCatalogueID</param-name>
+    <param-value>ServiceCatalogueID </param-value>
+  </context-param>
+  <context-param>
+    <param-name>Team</param-name>
+    <param-value>Project Classification.. </param-value>
+  </context-param>
+  <context-param>
+    <param-name>AccountName</param-name>
+    <param-value>AccountName </param-value>
+  </context-param>
+  <context-param>
+    <param-name>ExpertiseRequirements</param-name>
+    <param-value>Expertise Requirements </param-value>
+  </context-param>
+  <context-param>
+    <param-name>ExpertiseRequirementstext</param-name>
+    <param-value>Expertise Requirements text </param-value>
+  </context-param>
+  <context-param>
+    <param-name>TimeZoneRequirements</param-name>
+    <param-value>TimeZone Requirements </param-value>
+  </context-param>
+  <context-param>
+    <param-name>TimeZoneRequirementstext</param-name>
+    <param-value>Time-Zone</param-value>
+  </context-param>
+  <context-param>
+    <param-name>LanguageRequirements</param-name>
+    <param-value>Language Requirements </param-value>
+  </context-param>
+  <context-param>
+    <param-name>RegulatoryRequirements</param-name>
+    <param-value>Regulatory Requirements </param-value>
+  </context-param>
+  <context-param>
+    <param-name>ServiceOwner</param-name>
+    <param-value>Service - Owner</param-value>
+  </context-param>
+  <context-param>
+    <param-name>RegulatoryRequirementstext</param-name>
+    <param-value>Regulatory Requirements text </param-value>
+  </context-param>
+  <context-param>
+    <param-name>LanguageRequirementstext</param-name>
+    <param-value>Language Requirements text </param-value>
+  </context-param>
+  <context-param>
+    <param-name>DueDate</param-name>
+    <param-value>DueDate </param-value>
+  </context-param>
+  <context-param>
+    <param-name>CreatedDate</param-name>
+    <param-value>CreatedDate </param-value>
+  </context-param>
+  <context-param>
+    <param-name>StartDate</param-name>
+    <param-value>StartDate </param-value>
+  </context-param>
+  <context-param>
+    <param-name>EstimatedHours</param-name>
+    <param-value>EstimatedHours </param-value>
+  </context-param>
+  <context-param>
+    <param-name>Onsite</param-name>
+    <param-value>Onsite </param-value>
+  </context-param>
+  <context-param>
+    <param-name>Golden</param-name>
+    <param-value>Golden Rules </param-value>
+  </context-param>
+  <context-param>
+    <param-name>Country</param-name>
+    <param-value>Country </param-value>
+  </context-param>
+  <context-param>
+    <param-name>ExistingHardware</param-name>
+    <param-value>Sora Info For Existing Hardware</param-value>
+  </context-param>
+  <context-param>
+    <param-name>FutureHardware</param-name>
+    <param-value>Sora Info For New Hardware</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ExistingProtocol</param-name>
+    <param-value>Sora Info For Existing Protocol </param-value>
+  </context-param>
+  <context-param>
+    <param-name>FutureProtocol</param-name>
+    <param-value>Sora Info For New Protocol </param-value>
+  </context-param>
+  <context-param>
+    <param-name>Protocol</param-name>
+    <param-value>Protocol Info </param-value>
+  </context-param>
+  <context-param>
+    <param-name>Description</param-name>
+    <param-value>Description </param-value>
+  </context-param>
+  <context-param>
+    <param-name>SpecialComments</param-name>
+    <param-value>Special Comment</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DeliverableName</param-name>
+    <param-value>Deliverable Type </param-value>
+  </context-param>
+  <context-param>
+    <param-name>ResourceAssignedDate</param-name>
+    <param-value>Resource Assigned Date </param-value>
+  </context-param>
+  <context-param>
+    <param-name>CreatedBy</param-name>
+    <param-value>CreatedBy</param-value>
+  </context-param>
+  <context-param>
+    <param-name>RequestEntered</param-name>
+    <param-value>Request Entered Date</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ResourceEntered</param-name>
+    <param-value>Resource Entered</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ServiceOwner</param-name>
+    <param-value>Service Owner / Program Manager</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ProjStatus</param-name>
+    <param-value>Project Status</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Del1</param-name>
+    <param-value>Deliverable1</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Del2</param-name>
+    <param-value>Deliverable2</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Del3</param-name>
+    <param-value>Deliverable3</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Assignee1</param-name>
+    <param-value>Assignee1</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Assignee2</param-name>
+    <param-value>Assignee2</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Assignee3</param-name>
+    <param-value>Assignee3</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Triggers</param-name>
+    <param-value>Trigger</param-value>
+  </context-param>
+  <context-param>
+    <param-name>timeoutInterval</param-name>
+    <param-value>-1</param-value>
+  </context-param>
+  <context-param>
+    <param-name>locktimeoutInterval</param-name>
+    <param-value>10</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DB_IP</param-name>
+    <param-value>10.105.190.102</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DB_UserName</param-name>
+    <param-value>ATUser</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DB_Password</param-name>
+    <param-value>Cisco@123</param-value>
+  </context-param>
+  <servlet>
+    <description>Servlet to make a request to DCP</description>
+    <display-name>ValidatePID</display-name>
+    <servlet-name>ValidatePID</servlet-name>
+    <servlet-class>sat.tool.competency.ValidatePID</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidatePID</servlet-name>
+    <url-pattern>/ValidatePID</url-pattern>
+  </servlet-mapping>
+</web-app>

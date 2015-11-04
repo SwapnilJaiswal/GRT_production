@@ -1,0 +1,89 @@
+/* Style for tree item text */
+.mout {
+	color: #000000;
+	background-color: #DBDBDB;
+	text-decoration: none;
+	width: 100%;
+	padding: 0px;
+}
+.moutS {
+	color: #000000;
+	background-color: #EBEBEB;
+	text-decoration: none;
+	width: 100%;
+	padding: 0px;
+}
+.mover {
+	color: #339999;
+	background-color: #DBDBDB;
+	text-decoration: none;
+	width: 100%;
+	padding: 0px;
+}
+.moverS {
+	color: #339999;
+	background-color: #EBEBEB;
+	text-decoration: none;
+	width: 100%;
+	padding: 0px;
+}
+.t0ic {
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	background-color: #DBDBDB;
+}
+.t0icS {
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	background-color: #EBEBEB;
+}
+.t0io {
+	color: #339999;
+	text-decoration: none;
+	width: 100%;
+	background-color: #DBDBDB;
+}
+.t0ioS {
+	color: #339999;
+	text-decoration: none;
+	width: 100%;
+	background-color: #EBEBEB;
+}
+.t1ic {
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	background-color: #DBDBDB;
+}
+.t1icS {
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	background-color: #EBEBEB;
+}
+.t1io {
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	background-color: #DBDBDB;
+}
+.t1ioS {
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	background-color: #EBEBEB;
+}
+.altmover {
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 100%;
+	background-color: #DBDBDB;
+}
+.altmout {
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	background-color: #DBDBDB;
+}

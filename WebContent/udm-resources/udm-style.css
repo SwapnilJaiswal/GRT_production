@@ -1,0 +1,106 @@
+/* UDMv4.5 */
+/***************************************************************\
+
+  ULTIMATE DROP DOWN MENU Version 4.5 by Brothercake
+  http://www.udm4.com/
+  
+  This script may not be used or distributed without license
+
+\***************************************************************/
+
+
+
+/* meta-heading for site navigation */
+h2#menu {
+	position:absolute;
+	left:-10000px;
+	}
+
+
+
+/* menu dividers */
+.udm span.divider
+{
+	display:block;
+	position:relative;
+	left:1px;
+	border-top:1px solid #858a91;
+	height:0;
+	margin:1px 0 0 25px;
+	padding:0 0 1px 0;
+}
+
+/* IE tweaks */
+* html .udm span.divider
+{
+	overflow:hidden;
+	font-size:0;
+	height:expression('0', (document.compatMode == 'CSS1Compat' ? '0' : '2px'));
+}
+
+
+
+/* "disabled" link styles [nb: a disabled item should not have a submenu, as the styles will cascade to its items] */
+.udm li.disabled a, .udm li.disabled a:visited {
+	color:#b9b8b7 !important;
+	cursor:default !important;
+	}
+.udm li.disabled a:hover, .udm li.disabled a:focus, .udm li.disabled a:visited:hover, 
+.udm li.disabled a.udmR, .udm li.disabled a.udmR:visited, .udm li.disabled a:active {
+	color:#767d92 !important;
+	}
+
+/* menu dividers */
+.udm li.dividerBelow {
+	margin-bottom:2px !important;
+	padding-bottom:2px;
+	border-bottom:1px solid #ccc8c1;
+	}
+.udm li.dividerAbove {
+	margin-top:2px !important;
+	padding-top:2px;
+	border-top:1px solid #ccc8c1;
+	}
+
+/* all menu icons */
+.icon {
+	background-repeat:no-repeat;
+	background-position:2px 4px;
+	}
+
+
+
+/* icons with visible rollovers */
+.help {
+	background-image:url(icon-help.gif) !important;
+	}
+.help:hover, .help:focus, .help:active {
+	background-image:url(icon-help-rollover.gif) !important;
+	}
+
+.chart {
+	background-image:url(icon-chart.gif) !important;
+	}
+.chart:hover, .chart:focus, .chart:active {
+	background-image:url(icon-chart-rollover.gif) !important;
+	}
+
+
+
+
+/* static icons */
+.folder { background-image:url(icon-folder.gif) !important; }
+
+.dot { background-image:url(icon-dot.gif) !important; }
+
+.tick { background-image:url(icon-tick.gif) !important; }
+
+
+
+
+
+
+/***************************************************************/
+/* Generated CSS - do not edit this directly                   */
+/***************************************************************/
+

@@ -1,0 +1,699 @@
+/* body */
+body {position:absolute;z-index:0;top:0px;left:0px;width:100%;height:100%;max-height:100%;margin:0;padding:0;border:0;overflow:hidden;background-color:transparent;font-family:Arial;font-size:12px;color:#000000;}
+/* corehtml */
+a:link {color:#0088c2;text-decoration:none;}
+a:hover {color:#0088c2;text-decoration:underline;}
+a:visited {color:#993366;text-decoration:underline;}
+td {font-size:12px;color:#000000;}
+br {line-height:8px;clear:both;}
+/* common */
+.cuesBrSmall {line-height:6px;clear:both;}
+#cues8padding {padding:8px;}
+#cues6padding {padding:6px;}
+.cuesNowrap {white-space:nowrap;}
+.cuesWrap {white-space:normal;}
+.cuesPageLoadingLayer {z-index:100;position:absolute;top:0px;left:0px;height:1800px;width:2000px;opacity:.50;filter:alpha(opacity=50);background-color:#000000;overflow:hidden;padding:0;}
+#cuesPopupMask {position:absolute;z-index:200;top:0px;left:0px;width:100%;height:100%;background-image/**/: url("../cues_images/spacer.gif") !important;background-repeat:repeat;visibility:hidden;}
+.cuesRTLgap {font-size:1px;}
+cues_vml\:* {behavior:url(#default#VML);}
+.cuesRadius6 {border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;}
+.cuesRadius5 {border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
+.cuesRadius4 {border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}
+.cuesRadius3 {border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+/* about */
+.cuesAboutProductName {padding-left:28px;padding-top:155px;font-size:22px;color:#ffffff;}
+.cuesAboutVersionInfo {padding-left:28px;padding-top:2px;font-size:11px;color:#ffffff;font-weight:bold;}
+.cuesAboutLicenseInfo {padding-left:28px;padding-top:15px;font-size:10px;color:#ffffff;font-weight:bold;}
+.cuesAboutCopyright {padding-left:25px;padding-top:30px;padding-bottom:10px;font-size:10px;color:#ffffff;font-weight:normal;}
+.cuesAboutLogo {}
+.cuesAboutLicenseInfo a {color:#ffffff;}
+.cuesAboutLicenseInfo a:link {color:#ffffff;}
+.cuesAboutLicenseInfo a:visited {color:#ffffff;}
+#cuesAboutLogoImage {position:relative;right:10px;margin-bottom:7px;}
+#cuesAboutBackground {margin:0;padding:0;position:absolute;z-index:-1;width:100%;height:100%;}
+/* background */
+.cuesMainWindow {background-image:url(../cues_images/pageBackground.jpg);}
+.cuesBackground {z-index:-1;position:absolute;left:0;top:0;width:100%;height:100%;overflow:hidden;background-color:#002142;}
+.cuesBackgroundImage {width:100%;height:1024px;}
+/* breadcrumb */
+#cuesBreadcrumbTable td {color:#000000;font-size:11px;}
+.cuesBreadcrumbStatic {color:#000000;font-size:11px;}
+.cuesBreadcrumbLast {color:#000000;font-size:11px;}
+a.cuesBreadcrumbLink:link {color:#0088c2;font-size:11px;text-decoration:none;}
+a.cuesBreadcrumbLink:visited {color:#0088c2;font-size:11px;text-decoration:none;}
+a.cuesBreadcrumbLink:hover {color:#0088c2;font-size:11px;text-decoration:underline;}
+a.cuesBreadcrumbLink:active {color:#0088c2;font-size:11px;text-decoration:none;}
+/* button */
+#cuesButtonRowLeft {position:relative;text-align:right;margin:0;padding:0 8px 8px 8px;}
+#cuesButtonRowRight {position:relative;text-align:right;margin:0;padding:0 8px 8px 8px;}
+.cuesButtonRow {text-align:right; margin:0; padding:0;}
+.cuesButton {font-size:12px;margin:0 0 0 3px;cursor:pointer;}
+/* buttonmenu */
+.cuesButtonMenu {border:1px solid #53636a;padding:0px;margin:0px;list-style-type:none;}
+.cuesButtonMenuIE {width:10px;}
+.cuesButtonMenuIE li {margin-bottom:-3px;}
+.cuesButtonMenu li {display:block;height:18px;line-height:18px;color:#000000;background-color:#ffffff;}
+.cuesButtonMenu li a {display:block;padding:0px 6px;}
+.cuesButtonMenu a:visited {color:#000000;text-decoration:none;}
+.cuesButtonMenu a:active {color:#000000;text-decoration:none;}
+.cuesButtonMenu a:link {color:#000000;text-decoration:none;}
+.cuesButtonMenu a:hover {color:#ffffff;text-decoration:none;background-color:#8db71f;}
+/* carousel */
+.cuesCarousel {overflow:auto;position:relative;padding:0px;}
+.cuesCarouselLights {position:absolute;right:28;}
+.cuesCarouselLight {margin-right:3px;}
+.cuesCarouselPane {z-index:0;position:relative;top:20;width:300px;height:100px;left:29;right:29;overflow:auto;}
+.cuesCarouselItems {z-index:0;position:absolute;width:2048px;left:0;margin:0px;}
+.cuesCarouselItem {position:relative;border:1px solid #8499a2;display:inline;float:left;overflow:hidden;margin-right:30px;padding:0px;}
+.cuesCarouselLayer {z-index:-1;position:absolute;top:0px;left:0px;height:10;width:10;overflow:hidden;padding:0;background-color:#ffffff;opacity:.67;filter:alpha(opacity=67);}
+.cuesCarouselTitle {font-size:12px;}
+.cuesCarouselTitle:link {color:#0088c2;text-decoration:none;}
+.cuesCarouselTitle:visited {color:#0088c2;text-decoration:none;}
+.cuesCarouselTitle:hover {color:#0088c2;text-decoration:underline;}
+.cuesCarouselTitle:active {color:#0088c2;text-decoration:none;}
+.cuesCarouselContent {font-size:10px;padding:8px;}
+.cuesCarouselImage {float:left;margin-right:8px;margin-left:0px;margin-top:0px;}
+.cuesCarouselSlideLeft {z-index:1;position:absolute;left:0;top:50%;text-decoration:none;}
+.cuesCarouselSlideRight {z-index:1;position:absolute;right:0;top:50%;}
+/* combobox */
+.cuesComboboxContainerIE {display:inline;zoom:1;}
+.cuesComboboxContainerFF {display:table-row;}
+.cuesComboboxChoices {display:none;position:absolute;z-index:999;left:0px;border:1px solid #60e4fb;}
+.cuesComboboxContainerFF .cuesCombobox {border:1px solid #53636a;display:inline;padding-left:2px;padding-top:1px;padding-bottom:3px;padding-right:1px;background-color:#ffffff;}
+.cuesComboboxContainerIE .cuesCombobox {border:1px solid #53636a;display:inline;padding-left:2px;padding-top:1px;padding-bottom:1px;zoom:1;background-color:#ffffff;}
+.cuesCombobox {white-space:nowrap;}
+.cuesComboboxInput {font-size:12px;border:0;padding:0;margin:0;vertical-align:middle;}
+.cuesComboboxContainerIE .cuesComboboxArrow {vertical-align:middle;padding-right:2px;}
+.cuesComboboxContainerFF .cuesComboboxArrow {vertical-align:middle;padding-right:0px;}
+.cuesComboboxList {position:relative;}
+/* contentarea */
+#cuesContentBg {position:static;height:100%;border:1px solid #858A91;}
+* html #cuesContentBg {width:100%;}
+.cuesContentTitle {font-size:18px;color:#000000;height:28px;font-weight:normal;padding-left:5px;padding-top:6px;}
+#cuesContentTitleHelpLink {float:right;padding-right:4px;}
+/* dashboard */
+#cuesDashboard {table-layout:fixed;}
+.cuesDashboardCell {vertical-align:top;}
+.cuesDashboardPane {margin:7px 0px 7px 7px;padding:0px 7px 0px 0px;overflow:hidden;zoom:1;}
+.cuesDashboardPaneTitle {line-height:20px;position:relative;z-index:1;width:100%;color:#ffffff;font-size:12px;font-weight:bold;}
+.cuesDashboardPaneTitle img {cursor:pointer;vertical-align:middle;height:16px;margin-top:3px;margin-bottom:3px;}
+.cuesDashboardPaneTitle span {margin-left:8px;margin-right:8px;color:#ffffff;}
+.cuesDashboardPaneTitle span img {margin-left:1px;}
+.cuesDashboardPaneTitle a:link {text-decoration:underline;color:#ffffff;}
+.cuesDashboardPaneTitle a:visited {text-decoration:underline;color:#ffffff;}
+.cuesDashboardPaneDND {cursor:move;}
+.cuesDashboardPaneStatus {line-height:19px;height:19px;position:relative;overflow:hidden;color:#000000;font-weight:normal;font-size:11px;}
+.cuesDashboardPaneCriticalStatus {border:1px solid #e9102a;color:#e9102a;font-weight:bold;}
+.cuesDashboardPaneStatusLabel {color:#000000;font-weight:normal;font-size:11px;}
+.cuesDashboardPaneStatus div {margin-left:8px;margin-right:5px;font-weight:bold;}
+.cuesDashboardPaneStatusRTL {line-height:19px;height:19px;position:relative;overflow:hidden;color:#000000;font-weight:normal;font-size:11px;}
+.cuesDashboardPaneStatusRTL div {margin-right:8px;margin-left:5px;}
+.cuesDashboardPaneContent {position:relative;z-index:0;width:100%;background-color:#ffffff;}
+.cuesDashboardPaneContentLayer {background-color:transparent;background-image:url(../cues_images/DashboardPaneContentLayer.png);}
+#cuesDashboardPaneMover {position:absolute;cursor:move;background-color:#c5ccdf;display:none;border:1px solid black;z-index:99;top:-1000px;left:-1000px;}
+.cuesDashboardPaneShadow {height:4px;font-size:1px;background-repeat:repeat-x;background-image:url('../cues_images/drop-shadow-bot.gif');width:100%;}
+.cuesDashboardPaneNormalStatusLayer {z-index:-2;position:absolute;top:0;left:-10;width:200%;height:100px;background-color:#ffffff;opacity:.40;filter:alpha(opacity=40);}
+.cuesDashboardPaneCriticalStatusLayer {z-index:-2;position:absolute;top:0;left:-10;width:200%;height:100px;background-color:#fcdcdf;}
+.cuesDashboardEditPanel {display:none;border-bottom:1px solid #c0c0c0;padding-left:4px;padding-right:4px;}
+.cuesDashboardEditPanelCloseLink {font-size:12px;text-decoration:none;}
+.cuesDashboardEditPanelCloseLink:link {color:#0088c2;text-decoration:none;}
+.cuesDashboardEditPanelCloseLink:visited {color:#0088c2;text-decoration:none;}
+.cuesDashboardEditPanelCloseLink:hover {color:#0088c2;text-decoration:underline;}
+.cuesDashboardEditPanelCloseLink:active {color:#0088c2;text-decoration:none;}
+/* datepicker */
+#cuesDatePicker {position:absolute;background-color:#2D4754;padding-bottom:1px;z-index:999;}
+#cuesDatePickerInner {border:1px solid #68e5fb;padding:0px;background-color:#ffffff;}
+.cuesDatePickerHeader {background-color:#a2b9c9;height:29px;*height:auto;*padding:2px 0;}
+.cuesCalPrior {text-align:center;color:#8499a2;font-size:12px;}
+.cuesCalCurrent {text-align:center;color:#000000;font-size:12px;}
+.cuesCalFuture {text-align:center;color:#8499a2;font-size:12px;}
+.cuesCalToday {border:1px solid #0088c2;}
+.cuesCalSelected {font-size:12px;background-color:#8db71f;color:#ffffff;}
+.cuesCalFocused {background-color:#8db71f;color:#ffffff;}
+.cuesCalSpecial {font-weight:bold;}
+.cuesCalBlocked {color:#8499a2;background-color:#d9e3e9;cursor:default;}
+.cuesCalDisabled {color:#858a91;background-color:#d9e3e9;cursor:default;}
+.cuesCalWeekdays {color:#000000;font-size:12px;font-weight:bold;}
+.cuesCalTodayLinkDisabled {color:#858a91;text-decoration:none;}
+.cuesCalTodayLink {color:#000000;text-decoration:none;}
+.cuesCalTodayLink:link {color:#000000;text-decoration:none;}
+.cuesCalTodayLink:visited {color:#000000;text-decoration:none;}
+.cuesCalTodayLink:hover {color:#c0d5d5;text-decoration:none;}
+.cuesCalTodayLink:active {color:#000000;text-decoration:none;}
+#cuesDatePickerLegendSpecial {display:none;font-weight:bold;}
+#cuesDatePickerLegendBlocked {display:none;background-color:#d9e3e9;}
+#cuesDatePickerLegendBlocked div {display:inline;border:1px solid #ffffff;color:#8499a2;}
+.cuesDatePickerLegend {padding-left:10px;height:32px;*height:auto;*padding:3px 0 8px 10px;font-weight:normal;background-color:#d9e3e9;}
+#cuesDatePickerCal {color:#ff0000;margin:0 10px;}
+a.cuesDatePickerSelector:link {display:block;text-decoration:none;}
+#cuesDatePickerCal td, .cuesCalWeekdays {width:14px;height:11px;line-height:9px;text-align:right;border:3px solid transparent;*border:none;*width:20px;*height:17px;}
+.cuesCalWeekdays {width:16px;}
+#cuesDatePickerWeekdays {margin:10px 10px 5px;*padding-left:2px;}
+/* drawer */
+.cuesDrawersLayer {z-index:-1;position:absolute;top:0px;left:0px;height:100%;overflow:hidden;padding:0;background-color:#ffffff;opacity:.40;filter:alpha(opacity=40);}
+.cuesDrawersContainer {z-index:0;position:relative;overflow:hidden;padding:0;}
+.cuesDrawer {position:relative;width:auto;z-index:0;top:0px;left:0px;overflow:hidden;font-size:12px;color:#000000;padding:0;cursor:pointer;vertical-align:middle;border-bottom:1px solid #8499a2;height:25px;}
+.cuesDrawerContent {border-left:1px solid #8499a2;padding-top:8px;}
+.cuesDrawerIcon {margin:0 6px 0 0;vertical-align:middle}
+.cuesDrawerIconNoChild {margin:5px 6px 6px 21px;vertical-align:middle}
+.cuesSelectedDrawerItem {padding:3px;background-color:#92c212;color:#ffffff;}
+.cuesNormalDrawerItem {background-color:transparent;padding:0px;}
+.cuesNormalTreeDrawerItem {background-color:transparent;font-size:12px;padding:0px;}
+.cuesSelectedTreeDrawerItem {padding:0px;font-size:12px;background-color:#92c212;color:#ffffff;}
+a.cuesDrawerLink:link {line-height:25px;color:#000000;text-decoration:none;font-size:12px;}
+a.cuesDrawerLink:visited {line-height:25px;color:#000000;text-decoration:none;font-size:12px;}
+a.cuesDrawerLink:hover {line-height:25px;color:#000000;text-decoration:none;font-size:12px;}
+a.cuesDrawerLink:active {line-height:25px;color:#000000;text-decoration:none;font-size:12px;}
+.cuesDrawerCaptionActive a {line-height:25px;color:#ffffff;font-weight:bold;}
+.cuesDrawerCaptionActive a:link {line-height:25px;color:#ffffff;font-weight:bold;}
+.cuesDrawerCaptionActive a:active {line-height:25px;color:#ffffff;font-weight:bold;}
+.cuesDrawerCaptionActive a:visited {line-height:25px;color:#ffffff;font-weight:bold;}
+.cuesDrawerCaptionActive a:hover {line-height:25px;color:#ffffff;font-weight:bold;}
+a.cuesDrawerItemLink:link {margin-left:2px;margin-right:0px;color:#000000;text-decoration:none;font-size:12px;}
+a.cuesDrawerItemLink:visited {margin-left:2px;margin-right:0px;color:#000000;text-decoration:none;font-size:12px;}
+a.cuesDrawerItemLink:hover {margin-left:2px;margin-right:0px;color:#1fa0d5;text-decoration:none;font-size:12px;}
+a.cuesDrawerItemLink:active {margin-left:2px;margin-right:0px;color:#000000;text-decoration:none;font-size:12px;}
+.cuesSelectedTreeDrawerItem a {margin-left:2px;margin-right:0px;color:#ffffff;}
+.cuesSelectedTreeDrawerItem a:link {margin-left:2px;margin-right:0px;color:#ffffff;}
+.cuesSelectedTreeDrawerItem a:active {margin-left:2px;margin-right:0px;color:#ffffff;}
+.cuesSelectedTreeDrawerItem a:visited {margin-left:2px;margin-right:0px;color:#ffffff;}
+.cuesSelectedTreeDrawerItem a:hover {margin-left:2px;margin-right:0px;color:#ffffff;}
+.cuesDrawerScrollerDown {border-bottom:1px solid #8499a2;border-left:1px solid #8499a2;opacity:.60;filter:alpha(opacity=60);background-color:#ffffff;}
+.cuesDrawerScrollerUp {border-top:1px solid #8499a2;border-left:1px solid #8499a2;opacity:.60;filter:alpha(opacity=60);background-color:#ffffff;}
+.cuesDrawerToggler {margin-left:4px;margin-right:4px;line-height:25px;vertical-align:middle;}
+.cuesDrawerToggler img {vertical-align:text-bottom;}
+.cuesDrawerNonToggler {width:16px;vertical-align:middle;}
+.cuesDrawerVerticalAlign {display:inline-block;height:100%;}
+/* form_controls */
+form {display:inline;}
+input {font-size:12px;}
+select {font-size:12px;}
+optgroup {font-size:12px;}
+option {font-size:12px;}
+textarea {font-size:12px;}
+button {font-size:12px;}
+.cuesCheckbox {vertical-align:middle;}
+.invisibleLabel {display:none;}
+.cuesErroredControl {background-color:#FFFFCC;}
+.cuesErrorBox {border:1px solid #CC0000;padding:8px;margin:8px;color:#CC0000;}
+.cuesErrorText {color:#e9102a;background-image:url(../cues_images/ContextMessageArrow_DownT.gif);background-repeat:no-repeat;background-position:0 100%;padding-bottom:16px;margin-bottom:3px;font-size:11px;font-weight:bold;}
+.cuesErrorTextInline {color:#e9102a;display:inline;background-image:url(../cues_images/ContextMessageArrow_LeftT.gif);background-repeat:no-repeat;background-position:3px -1px;vertical-align:top;padding-left:18px;font-size:11px;font-weight:bold;position:relative;top:3px;}
+.cuesErrorTextInlineFloatRight {color:#e9102a;float:right;display:inline;background-image:url(../cues_images/ContextMessageArrow_LeftT.gif);background-repeat:no-repeat;background-position:3px 0px;vertical-align:top;padding-left:18px;font-size:11px;font-weight:bold;}
+.cuesErrorTextInlineFloatLeft {color:#e9102a;float:left;display:inline;background-image:url(../cues_images/ContextMessageArrow_LeftT.gif);background-repeat:no-repeat;background-position:3px 0px;vertical-align:top;padding-left:18px;font-size:11px;font-weight:bold;}
+.cuesDisabledField {background-color:#dfdfdf;}
+.cuesFormPane {border:1px solid #8499a2;position:relative;margin-bottom:10px;}
+.cuesFormPaneIE {height:1%;}
+.cuesFormPaneContainer {padding:10px;zoom:1;}
+.cuesFormPaneLayer {z-index:-1;position:absolute;top:0px;left:0px;height:100%;width:100%;overflow:hidden;padding:0;background-color:#ffffff;opacity:.40;filter:alpha(opacity=40);}
+.cuesRequiredFieldsNotice {color:#e74201;}
+.cuesRequiredField {display:inline;padding-right:3px;width:13px;}
+.cuesRequiredField img {vertical-align:top;margin-top:2px;}
+.cuesRequiredField span {padding-right:10px;}
+/* gettingStarted */
+.cuesGettingStartedContainer {margin:0px;text-align:left;position:relative;}
+.cuesGettingStartedLayer {z-index:-1;position:absolute;top:0px;left:0px;height:1800px;width:100%;opacity:.40;filter:alpha(opacity=40);background-color:#ffffff;overflow:hidden;padding:0;}
+.cuesGettingStartedCaption {padding-left:11px;background-color:#53636a;height:49px;}
+.cuesGettingStartedCaption span {line-height:49px;vertical-align:middle;color:#ffffff;font-size:18px;font-weight:normal;}
+.cuesGettingStartedHeader {padding-top:12px;padding-bottom:18px;padding-left:10px;}
+.cuesGettingStartedHeaderText {display:block;color:#000000;font-size:12px;font-weight:normal;}
+.cuesGettingStartedBody {}
+.cuesGettingStartedBody table {width:100%;margin-left:8px;padding-right:10px;}
+.cuesGettingStartedSection {margin-bottom:24px;}
+.cuesGettingStartedSectionLast {margin-bottom:0px;}
+.cuesGettingStartedSectionTitle {color:#000000;font-size:14px;font-weight:normal;}
+.cuesGettingStartedSectionTitle span {margin-left:12px;vertical-align:40%;}
+.cuesGettingStartedSectionItem {margin-left:37px;font-size:12px;}
+.cuesGettingStartedSectionItem a {color:#0088c2;font-size:12px;}
+.cuesGettingStartedSectionItem a:link {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedSectionItem a:hover {text-decoration:underline;color:#0088c2;}
+.cuesGettingStartedSectionItem a:active {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedSectionItem a:visited {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedSectionDivider {width:13px;padding:0;background-image:url(../cues_images/sectiondivider.gif);background-repeat:repeat-y;}
+.cuesGettingStartedFooter {margin-top:20px;margin-left:10px;margin-right:10px;background-image:url(../cues_images/ToolbarContent.png);}
+.cuesGettingStartedFooter span {margin-left:13px;line-height:39px;color:#000000;font-size:12px;font-weight:normal;}
+.cuesGettingStartedFooterItem a {color:#0088c2;font-size:12px;font-weight:normal;}
+.cuesGettingStartedFooterItem a:link {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedFooterItem a:hover {text-decoration:underline;color:#0088c2;}
+.cuesGettingStartedFooterItem a:active {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedFooterItem a:visited {text-decoration:none;color:#0088c2;}
+a.cuesGettingStartedFooterItem {color:#0088c2;font-size:12px;font-weight:normal;}
+a.cuesGettingStartedFooterItem:link {text-decoration:none;color:#0088c2;}
+a.cuesGettingStartedFooterItem:hover {text-decoration:underline;color:#0088c2;}
+a.cuesGettingStartedFooterItem:active {text-decoration:none;color:#0088c2;}
+a.cuesGettingStartedFooterItem:visited {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedConfigure {padding-top:10px;}
+.cuesGettingStartedConfigure span {margin-left:18px;color:#000000;font-size:12px;font-weight:normal;}
+/* groupbox */
+.cuesGroupBox {padding:0;border:0px;}
+.cuesGroupBoxIndented {padding:2px 4px 2px 4px;border:0px;}
+.cuesGroupBox1OnRow {margin:8px 8px 0 8px}
+.cuesGroupBoxTitle {font-size:12px;color:#000000;font-weight:bold;}
+/* hideshow */
+a.cuesHideShow:link {color:#000000;text-decoration:none;}
+a.cuesHideShow:visited {color:#000000;text-decoration:none;}
+a.cuesHideShow:hover {color:#000000;text-decoration:none;}
+a.cuesHideShow:active {color:#000000;text-decoration:none;}
+button.cuesHideShow {background-color:transparent;height:20px;border:0px;}
+.cuesHideShowIcon {margin:-3px 0 0 0;vertical-align:middle;}
+/* layout */
+.cuesLayoutNavArea {border-width:0px;border-color:#8499a2;border-style:solid;border-right:1px solid #8499a2;}
+.cuesLayoutNavContainer {z-index:0;position:relative;height:100%;width:100%;overflow:hidden;padding:0;}
+.cuesLayoutNavLayer {z-index:-1;position:absolute;top:0px;left:0px;height:100%;width:100%;overflow:hidden;padding:0;background-color:#ffffff;opacity:.67;filter:alpha(opacity=67);}
+.cuesLayoutNavAreaTree {background-color:blue;border-width:1px;border-color:#8499a2;border-style:solid;}
+#cuesLayoutContentArea {width:100%;border-color:#8499a2;border-style:solid;border-width:0px;}
+#cuesLayoutLeftBorder {width:15px;}
+#cuesLayoutRightBorder {width:15px;}
+.cuesContentLayer {z-index:-1;position:absolute;top:0px;left:0px;height:1800px;width:2000px;overflow:hidden;padding:0;background-color:#ffffff;opacity:.67;filter:alpha(opacity=67);}
+#cuesContentArea {z-index:1;}
+.cuesLayoutCopyright {padding-left:15px;line-height:36px;color:#ffffff;font-weight:normal;font-size:11px;}
+.cuesLayoutCopyright a {color:#ffffff;}
+.cuesLayoutCopyright a:visited {color:#ffffff;}
+#cuesResizeLayer {z-index:999;position:absolute;top:0;left:0;height:2048px;width:2048px;display:none;overflow:hidden;background-color:#ffffff;opacity:.40;filter:alpha(opacity=40);}
+#cuesResizeBox {position:absolute;top:0;left:0;width:20px;border:1px dashed black;background-color:#6b7485;}
+#cuesNavGripper {margin-left:1px;}
+.cuesLayoutContentLayer {z-index:-1;position:absolute;top:0px;left:0px;height:100%;width:100%;overflow:hidden;padding:0;background-color:#ffffff;opacity:.67;filter:alpha(opacity=67);}
+#cuesLayoutTaskPanelContainer {position:relative;height:100%;margin:0;padding:0;zoom:1;}
+.cuesLayoutTaskPanelLayer {z-index:-1;position:absolute;top:0px;left:0px;height:100%;width:100%;overflow:hidden;padding:0;background-color:#ffffff;opacity:.83;filter:alpha(opacity=83);}
+/* login */
+.cuesLoginContainer {height:100%;width:100%;}
+.cuesLoginProductSection {padding-right:20px;margin-top:0px;margin-left:0px;margin-right:20px;position:relative;float:left;}
+.cuesLoginFieldsSection {padding-left:20px;margin-top:0px;margin-left:20px;margin-right:0px;position:relative;float:right;}
+.cuesLoginProductSectionRTL {padding-left:20px;margin-top:0px;margin-left:20px;margin-right:0px;position:relative;float:right;}
+.cuesLoginFieldsSectionRTL {padding-right:20px;margin-top:0px;margin-left:0px;margin-right:20px;position:relative;float:left;}
+.cuesLoginInfoSection {margin-left:0px;margin-right:0px;margin-bottom:20px;position:relative;}
+.cuesLoginClear {clear:both;line-height:1px;}
+.cuesLoginCopyright {color:#ffffff;}
+.cuesLoginCopyright a {color:#ffffff;}
+.cuesLoginVersionInfo {color:#ffffff;font-size:11px;font-weight:bold;}
+.cuesLoginProductName {color:#ffffff;font-size:18px;font-weight:normal;}
+.cuesLoginProductFamily {color:#ffffff;font-size:14px;font-weight:normal;}
+.cuesLoginProductSubtitle {color:#ffffff;font-size:14px;font-weight:normal;}
+.cuesLoginButton {border-top:1px solid #acc2cd;border-left:1px solid #acc2cd;border-right:1px solid #1f4355;border-bottom:1px solid #1f4355;}
+.cuesLoginField {color:#ffffff;font-size:12px;font-weight:normal;}
+a.cuesLoginLink:link {color:#ffffff;white-space:nowrap;}
+a.cuesLoginLink:visited {color:#ffffff;white-space:nowrap;}
+a.cuesLoginLink:hover {color:#ffffff;white-space:nowrap;}
+a.cuesLoginLink:active {color:#ffffff;white-space:nowrap;}
+a.cuesLoginProblemLink:link {color:#ffffff;text-decoration:none;font-size:11px;}
+a.cuesLoginProblemLink:visited {color:#ffffff;text-decoration:none;font-size:11px;}
+a.cuesLoginProblemLink:hover {color:#ffffff;text-decoration:underline;font-size:11px;}
+a.cuesLoginProblemLink:active {color:#ffffff;text-decoration:none;font-size:11px;}
+.cuesLoginLogo {margin-right:20px;}
+.cuesLoginStatus {position:absolute;padding:7px;}
+.cuesLoginStatus .cuesStatusBox {padding:0px;}
+.cuesLoginErrorBox {padding:5px;position:relative;zoom:1;}
+.cuesLoginErrorTextIE {margin-bottom:-4px;padding-bottom:14px;}
+.cuesLoginErrorTextFF {margin-bottom:-3px;padding-bottom:13px;}
+.cuesLoginFieldsSection  INPUT.cuesLoginFieldText, .cuesLoginFieldsSection  INPUT.cuesLoginFieldPassword { width: 120px; }
+
+/* mclb */
+.cuesMCLBHeader {border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-top:1px solid #8499a2;border-bottom:0px;background-color:#d9e3e9;}
+.cuesMCLBHeader td {border-top:0px;border-left:1px solid #dbdbdb;border-right:1px solid #ffffff;padding-left:4px;padding-right:4px;line-height:19px;background-color:#d9e3e9;font-size:12px;font-weight:normal;}
+.cuesMCLBContent {position:relative;overflow:auto;height:60px;border-top:0px;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;}
+.cuesMCLBContent select {font-family:Arial;}
+/* menu */
+.udm a {font-size:12px;text-decoration:none;}
+#udm a {font-size:12px;text-decoration:none;}
+.udmsubmenu {font-size:12px;}
+#udmsubmenu {font-size:12px;}
+.udmsubmenu ul.udmsubmenu a {font-size:11px;text-decoration:none;}
+#udmsubmenu ul.udmsubmenu a {font-size:11px;text-decoration:none;}
+/* messages */
+.cuesLoadingBox {z-index:999;width:300px;height:73px;position:absolute;border:0px;background-color:#a2b9c9;}
+.cuesLoadingBody {padding:8 0 8 0;background-color:#a2b9c9;}
+.cuesLoadingLayer {z-index:-1;position:absolute;top:0px;left:0px;padding:0px;height:1600px;width:2000px;opacity:.50;filter:alpha(opacity=50);background-color:#000000;overflow:hidden;}
+.cuesLoadingMessage {position:relative;top:12px;font-size:12px;color:#000000;}
+.cuesDynamicMessageBox {z-index:999;width:275px;height:73px;position:absolute;padding:18 10 10 10;background-color:#a2b9c9;border:0;font-size:12px;color:#000000;}
+.cuesDynamicMessageLayer {z-index:999;position:absolute;top:0;left:0;height:100%;width:100%;opacity:.50;filter:alpha(opacity=50);background-color:#000000;overflow:hidden;}
+/* pageheader */
+.cuesHeaderBg {width:100%;background-image:url('../cues_images/headerBgGradient.gif'); }
+.cuesHeaderBgLTR {width:100%;background-image:url('../cues_images/headerBgGradient.gif'); }
+.cuesHeaderBgRTL {width:100%;background-position:right;background-image:url('../cues_images/headerBgGradientRTL.gif'); }
+.cuesHeaderAccent {background:#003333;height:8px;}
+.cuesHeaderTitleLogo {vertical-align:bottom;font-size:22px;color:#ffffff;font-weight:normal;}
+.cuesHeaderTitleNoLogo {padding:0 12px;font-size:22px;color:#ffffff;font-weight:normal;}
+.cuesHeaderSubtitle {font-size:14px;color:#ffffff;font-weight:normal;}
+.cuesHeaderText {margin-left:8px;margin-right:8px;color:#ffffff;font-size:11px;}
+.cuesHeaderTextBold {margin-left:8px;margin-right:8px;color:#ffffff;font-weight:bold;font-size:11px;}
+a.cuesHeaderLink {margin-left:7px;margin-right:7px;font-size:11px;}
+a.cuesHeaderLink:link {color:#ffffff;text-decoration:none;}
+a.cuesHeaderLink:visited {color:#ffffff;text-decoration:none;}
+a.cuesHeaderLink:hover {color:#ffffff;text-decoration:underline;}
+a.cuesHeaderLink:active {color:#ffffff;text-decoration:none;}
+a.cuesHeaderLinkBold {margin-left:7px;margin-right:7px;}
+a.cuesHeaderLinkBold:link {color:#ffffff;text-decoration:none;font-weight:bold;font-size:11px;}
+a.cuesHeaderLinkBold:visited {color:#ffffff;text-decoration:none;font-weight:bold;font-size:11px;}
+a.cuesHeaderLinkBold:hover {color:#ffffff;text-decoration:underline;font-weight:bold;font-size:11px;}
+a.cuesHeaderLinkBold:active {color:#ffffff;text-decoration:none;font-weight:bold;font-size:11px;}
+.cuesHeaderNavArea {padding-left:4px;color:#ffffff;}
+.cuesHeaderTextArea {padding-left:4px;vertical-align:top;text-align:right;font-size:11px;}
+.cuesHeaderDivider {padding:0 12px;color:#ffffff;}
+#cuesHeaderLogoImage {margin-left:15px;}
+.cuesHeaderTable {margin-right:10px;margin-top:15px;margin-bottom:10px;}
+a.cuesAppSwitcher {margin-left:7px;margin-right:7px;position:relative;top:-8px;font-size:11px;}
+a.cuesAppSwitcher:link {color:#ffffff;text-decoration:none;}
+a.cuesAppSwitcher:visited {color:#ffffff;text-decoration:none;}
+a.cuesAppSwitcher:hover {color:#ffffff;text-decoration:none;}
+a.cuesAppSwitcher:active {color:#ffffff;text-decoration:none;}
+.cuesAppSwitcher img {vertical-align:middle;}
+.cuesAppSwitcherBox {position:absolute;top:0;right:0;height:25px;width:170px;}
+.cuesAppSwitcherBoxRTL {position:absolute;top:0;left:0;height:25px;width:170px;}
+.cuesAppSwitcherMenu {padding-left:20px !important;}
+.cuesAppSwitcherMenuActive {padding-left:20px !important;background-image:url(../cues_icons/wizard_check.gif);background-repeat:no-repeat;background-position:4 50%;}
+/* pagination */
+.cuesPagination {font-size:12px;font-weight:normal;}
+.cuesPaginationbutton {font-size:2pt;margin-left:4px;margin-right:4px;padding:0px;}
+.enabledPageLink {padding-left:5px;padding-right:5px;color:#0088c2;font-weight:normal;}
+a.enabledPageLink:link {color:#0088c2;text-decoration:none;}
+a.enabledPageLink:visited {color:#0088c2;text-decoration:none;}
+a.enabledPageLink:active {color:#0088c2;text-decoration:none;}
+a.enabledPageLink:hover {color:#0088c2;text-decoration:none;}
+.disabledPageLink {margin-left:4px;margin-right:4px;color:#858994;font-weight:normal;}
+.activePage {margin-left:4px;margin-right:4px;font-weight:bold;color:#000000;}
+/* pane */
+.cuesPaneTitle {padding:2px 8px;line-height:16px;vertical-align:middle;font-size:12px;font-weight:bold;color:#000000;}
+.cuesPaneTitleBg {border:1px solid #858A91;background-color:#c5ccdf;}
+.cuesPaneContainer {overflow:auto;border-top:1px solid #858A91;border-bottom:1px solid #858A91;background-color:#ffffff;}
+/* primarytabs */
+.cuesPrimaryTabset {padding:0px;margin:0px;position:relative;zoom:1;}
+.cuesPrimaryTabset table {table-layout:auto;margin-left:4px;margin-right:4px;margin-bottom:3px;padding:0;border-collapse:collapse;}
+.cuesPrimaryTab {position:relative;z-index:0;margin:5px 4px 5px 4px;padding:0;cursor:pointer;}
+.cuesPrimaryTabCaption {padding-left:14px;padding-right:14px;padding-top:4px;padding-bottom:4px;}
+.cuesPrimaryTabCaptionActive {font-weight:bold;color:#ffffff;}
+.cuesPrimaryTabCaptionActive a:link {color:#ffffff;}
+.cuesPrimaryTabCaptionActive a:active {color:#ffffff;}
+.cuesPrimaryTabCaptionActive a:visited {color:#ffffff;}
+.cuesPrimaryTabCaptionActive a:hover {color:#ffffff;}
+.cuesPrimaryTabCaptionInactive {font-weight:normal;color:#ffffff;}
+.cuesPrimaryTabCaptionInactive a:link {color:#ffffff;}
+.cuesPrimaryTabCaptionInactive a:visited {color:#ffffff;}
+.cuesPrimaryTabCaptionInactive a:hover {color:#000000;}
+.cuesPrimaryTabCaptionInactive a:active {color:#ffffff;}
+a.cuesPrimaryTabLink:link {text-decoration:none;font-size:12px;}
+a.cuesPrimaryTabLink:visited {text-decoration:none;font-size:12px;}
+a.cuesPrimaryTabLink:hover {text-decoration:none;font-size:12px;}
+a.cuesPrimaryTabLink:active {text-decoration:none;font-size:12px;}
+/* progressbar */
+.cuesProgressBar {line-height:15px;border-top:1px solid #d0cfcf;border-left:1px solid #d0cfcf;border-right:1px solid #d0cfcf;border-bottom:1px solid #a3a3a3;position:relative;width:270px;padding:0;overflow:hidden;background-color:#ffffff;}
+.cuesProgressBarDeterminate {height:15px;zoom:1;position:absolute;left:0;top:0;width:0px;background-image:url("../cues_images/ProgressBar_Determinate.jpg");background-repeat:repeat-x;display:none;}
+/* rss */
+.cuesRSS {padding:0px 5px 0px 5px;}
+.cuesRSS img {vertical-align:middle;height:12px;width:12px;}
+/* rules */
+.cuesHR {height:1px;color:#8499a2;opacity:.60;filter:alpha(opacity=60);}
+.cuesHRLabel {font-weight:bold;}
+/* scheduler */
+.cuesSchedulerContainer {border:1px solid #8499a2;}
+.cuesSchedulerButtonRow {text-align:left;padding-top:3px;padding-bottom:3px;padding-left:10px;background-color:#d9e3e9;}
+.cuesSchedulerRowOdd {background-color:#f5f9fd;}
+.cuesSchedulerRowEven {background-color:#ebeff3;}
+.cuesSchedulerTickMark {border-right:2px solid #a0a0a0;}
+.cuesSchedulerLeftCell {}
+.cuesSchedulerRowHeaderCell {text-align:right;border-top:1px solid #808080;border-right:1px solid #8499a2;padding-right:5px;font-size:12px;color:#000000;background-color:#d9e3e9;}
+.cuesSchedulerHeader {background-color:#d9e3e9;}
+.cuesSchedulerColumnHeaderCell {text-align:center;border-left:1px solid #ffffff;font-size:12px;color:#000000;}
+.cuesSchedulerLastRow {border-bottom:1px solid #808080;}
+.cuesSchedulerCell {border-top:1px solid #d9e3e9;border-right:1px solid #d9e3e9;}
+.cuesSchedulerCell2 {border-top:1px solid #d9e3e9;border-right:2px solid #d9e3e9;}
+.cuesSchedulerByTimeCell {border-top:1px solid #d9e3e9;border-left:1px solid #d9e3e9;}
+#cuesSchedulerPicked {background-color:#8db71f;}
+#cuesSchedulerNotPicked {background-color:none;}
+.cuesSchedulerLegendPicked {border:1px solid black;background-color:#8db71f;}
+.cuesSchedulerLegendNotPicked {border:1px solid black;background-color:#ffffff;}
+.cuesSchedulerFocus {border:1px solid red;}
+/* secondarytabs */
+.cuesSecondaryTabset {border-bottom:4px solid #8db71f;padding:0px;zoom:1;}
+.cuesSecondaryTab {position:relative;z-index:0;margin:0px 3px 0px 0px;padding:0;cursor:pointer;zoom:1;}
+.cuesSecondaryTabCaption {padding-left:8px;padding-right:8px;padding-top:4px;padding-bottom:4px;}
+.cuesSecondaryTabCaptionActive {font-weight:bold;color:#ffffff;}
+.cuesSecondaryTabCaptionActive a:link {color:#ffffff;}
+.cuesSecondaryTabCaptionActive a:active {color:#ffffff;}
+.cuesSecondaryTabCaptionActive a:visited {color:#ffffff;}
+.cuesSecondaryTabCaptionActive a:hover {color:#ffffff;}
+.cuesSecondaryTabCaptionInactive {font-weight:normal;color:#ffffff;}
+.cuesSecondaryTabCaptionInactive a:link {color:#ffffff;}
+.cuesSecondaryTabCaptionInactive a:visited {color:#ffffff;}
+.cuesSecondaryTabCaptionInactive a:hover {color:#000000;}
+.cuesSecondaryTabCaptionInactive a:active {color:#ffffff;}
+a.cuesSecondaryTabLink:link {text-decoration:none;font-size:12px;}
+a.cuesSecondaryTabLink:visited {text-decoration:none;font-size:12px;}
+a.cuesSecondaryTabLink:hover {text-decoration:none;font-size:12px;}
+a.cuesSecondaryTabLink:active {text-decoration:none;font-size:12px;}
+/* shadowing */
+.cuesShadowIE {height:1em;filter:dropShadow(Color=#999999,offX=1,offY=1,positive=true);}
+.cuesShadowFF {position:relative;display:block;}
+.cuesShadowFF span {position:absolute;display:block;top:0px;white-space:nowrap;}
+.cuesShadowFF:before {display:block;content:attr(shadowText);color:#999999;padding:1px;}
+.cuesShadowNative {text-shadow:2px 2px 2px #999999;}
+/* spinner */
+.cuesSpinnerContainer {display:inline;position:relative;white-space:nowrap;zoom:1;}
+/* statusbox */
+.cuesStatusBox {padding-top:15px;padding-bottom:15px;border:0px;}
+.cuesStatusText {padding-left:8px;font-size:14px;color:#000000;}
+.cuesStatusBoxError {padding:0;margin:0;border:0px;}
+.cuesStatusTextError {padding-left:8px;font-size:14px;color:#e9102a;}
+/* table */
+.cuesTableTitleBg {background-color:#a2b9c9;border:1px solid #8499a2;}
+.cuesTableTitle {font-size:12px;font-weight:bold;color:#000000;padding:2px 8px;line-height:16px;vertical-align:middle;height:24px;}
+.cuesTableTitleIcon {margin-right:5px;vertical-align:text-bottom;}
+.cuesTableTitleButtonRow {margin:0px;padding:2px 8px;}
+.cuesTableFilterArea {background-color:#e5ebf3;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;padding:3px 8px;line-height:29px;zoom:1;}
+* html .cuesTableFilterArea {padding:4px 8px;}
+.cuesTableMultiFilterButton {padding:0px;margin-right:2px;}
+.cuesTableMultiFilterButton img {vertical-align:text-bottom;}
+.cuesTableBg {border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;}
+.cuesTableBg th {background-color:#d9e3e9;border-left:1px solid #a2b9c9;border-right:1px solid #ffffff;border-bottom:1px solid #8499a2;font-size:12px;color:#000000;font-weight:normal;padding:2px 8px;text-align:left;vertical-align:middle;line-height:16px;}
+.cuesTableBg td {padding:2px 8px;text-align:left;vertical-align:text-top;line-height:20px;}
+.cuesTableScrollableBg {border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;}
+.cuesTableScrollableBg table {table-layout:fixed;border-right:1px solid #8499a2;}
+.cuesTableScrollableBg th {background-color:#d9e3e9;border-left:1px solid #a2b9c9;border-right:1px solid #ffffff;font-size:12px;color:#000000;font-weight:normal;padding:2px 8px;text-align:left;vertical-align:middle;line-height:16px;}
+.cuesTableScrollableBg td {padding:2px 8px;vertical-align:middle;line-height:16px;}
+.cuesTableColumnHeaderSorted {font-weight:bold;}
+.cuesTableOverhang {background-color:#d9e3e9;border-right:1px solid #8499a2;}
+.cuesTableOverhangRTL {background-color:#d9e3e9;border-left:1px solid #8499a2;}
+.cuesTableGroupedBg {background-color:#d9e3e9;}
+.cuesTableRowOdd {background-color:#e5ebf3;}
+.cuesTableRowOdd td {font-size:12px;color:#000000;border-left:1px solid #e5ebf3;border-right:1px solid #e5ebf3;border-bottom:1px solid #e5ebf3;}
+.cuesTableRowOddSelected {background:#8db71f url(../cues_images/tableSelectedRowBg.gif) top left repeat-x;}
+.cuesTableRowOddSelected td {font-size:12px;color:#ffffff;border-left:1px solid transparent;border-right:1px solid transparent;border-bottom:1px solid transparent;}
+* html .cuesTableRowOddSelected td {border-left-color:#8db71f;border-right-color:#8db71f;border-bottom-color:#8db71f;}
+.cuesTableRowOddErrored {background-color:#fcdbdf;}
+.cuesTableRowOddErrored td {border-bottom:1px solid #fcdbdf;}
+.cuesTableRowOddErroredSelected {background-color:#fcdbdf;}
+.cuesTableRowOddErroredSelected td {border-bottom:1px solid #fcdbdf;}
+.cuesTableRowEven {background-color:#f1f5fa;}
+.cuesTableRowEven td {font-size:12px;color:#000000;border-left:1px solid #f1f5fa;border-right:1px solid #f1f5fa;border-bottom:1px solid #f1f5fa;}
+.cuesTableRowEvenSelected {background:#8db71f url(../cues_images/tableSelectedRowBg.gif) top left repeat-x;}
+.cuesTableRowEvenSelected td {font-size:12px;color:#ffffff;border-left:1px solid transparent;border-right:1px solid transparent;border-bottom:1px solid transparent;}
+* html .cuesTableRowEvenSelected td {border-left-color:#8db71f;border-right-color:#8db71f;border-bottom-color:#8db71f;}
+.cuesTableRowEvenErrored {background-color:#fcdbdf;}
+.cuesTableRowEvenErrored td {border-bottom:1px solid #fcdbdf;}
+.cuesTableRowEvenErroredSelected {background-color:#fcdbdf;}
+.cuesTableRowEvenErroredSelected td {border-bottom:1px solid #fcdbdf;}
+.cuesTableRowEmpty {background-color:#e5ebf3;}
+.cuesTableRowEmpty td {font-size:12px;color:#000000;padding:2px 8px;vertical-align:text-top;line-height:20px;}
+.cuesTableTreeRowTopOdd {background-color:#e5ebf3;}
+.cuesTableTreeRowTopOdd td {font-size:12px;color:#000000;padding:2px 8px;border-left:1px solid #e5ebf3;border-right:1px solid #e5ebf3;border-top:1px solid #a2b9c9;}
+.cuesTableTreeRowTopOddSelected {background:#8db71f url(../cues_images/tableSelectedRowBg.gif) top left repeat-x;}
+.cuesTableTreeRowTopOddSelected td {padding:2px 8px;border-top:1px solid #a2b9c9;}
+.cuesTableTreeRowTopOddSelected * {background-color:#8db71f;}
+.cuesTableTreeRowChildOdd {background-color:#e5ebf3;}
+.cuesTableTreeRowChildOdd td {font-size:12px;color:#000000;padding:2px 8px;border-left:1px solid #e5ebf3;border-right:1px solid #e5ebf3;}
+.cuesTableTreeRowChildOddSelected {background-color:#8db71f;}
+.cuesTableTreeRowChildOddSelected td {padding:2px 8px;background-color:#8db71f;}
+.cuesTableTreeRowChildOddSelected * {background-color:#8db71f;}
+.cuesTableTreeRowTopEven {background-color:#f1f5fa;}
+.cuesTableTreeRowTopEven td {font-size:12px;color:#000000;padding:2px 8px;border-left:1px solid #f1f5fa;border-right:1px solid #f1f5fa;border-top:1px solid #a2b9c9;}
+.cuesTableTreeRowTopEvenSelected {background:#8db71f url(../cues_images/tableSelectedRowBg.gif) top left repeat-x;}
+.cuesTableTreeRowTopEvenSelected td {padding:2px 8px;background-color:#8db71f;border-top:1px solid #a2b9c9;}
+.cuesTableTreeRowTopEvenSelected * {background-color:#8db71f;}
+.cuesTableTreeRowChildEven {background-color:#f1f5fa;}
+.cuesTableTreeRowChildEven td {font-size:12px;color:#000000;padding:2px 8px;border-left:1px solid #f1f5fa;border-right:1px solid #f1f5fa;}
+.cuesTableTreeRowChildEvenSelected {background-color:#8db71f url(../cues_images/tableSelectedRowBg.gif) top left repeat-x;}
+.cuesTableTreeRowChildEvenSelected td {padding:2px 8px;background-color:#8db71f;}
+.cuesTableTreeRowChildEvenSelected * {background-color:#8db71f;}
+.cuesTableButtonArea {width:100%;background-color:#d9e3e9;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;}
+.cuesTableButtonArea td {padding:3px 4px;height:29px;}
+.cuesTablePagingArea {background-color:#a2b9c9;}
+.cuesTableTitlelessContainer .cuesTablePagingArea {visibility:hidden;}
+.cuesTablePagingButton {padding-left:0;padding-right:0;}
+.cuesTablePagingButton img {vertical-align:text-bottom;}
+.cuesTablePagingItems {color:#000000;font-style:italic;}
+.cuesTablePagingRowsPer {color:#000000;}
+.cuesTablePagingGoto {color:#000000;}
+.cuesTablePagingGoto td {padding:0px;}
+.cuesTableRowSpecial {background-color:#d9e3e9;}
+.cuesTableRowSpecial td {font-size:12px;font-weight:normal;color:black/>;border-left:1px solid #d9e3e9;border-right:1px solid #d9e3e9;}
+td.cuesTableReorderColumn {color:#000000;width:20px;background-color:#d9e3e9;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;padding:2px 8px;vertical-align:middle;line-height:20px;text-align:right;background-image:none;}
+th.cuesTableReorderColumn {color:#000000;width:20px;background-color:#d9e3e9;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;padding:2px 8px;vertical-align:middle;line-height:20px;text-align:right;background-image:none;}
+.cuesTableSelectionColumn {color:#000000;width:20px;padding:2px 8px;}
+.cuesTableRowAccessibility {}
+.cuesTableRowAccessibility th {position:absolute;left:-999em;width:1em;overflow:hidden;font-size:1px;}
+.cuesTableRowAccessibility td {position:absolute;left:-999em;width:1em;overflow:hidden;font-size:1px;}
+.cuesTableTitlelessBg {border-bottom:1px solid #8499a2;}
+.cuesTableTitlelessBg td {font-size:1px;line-height:1px;background-color:transparent;}
+.cuesTableTitleContainer {background-color:#a2b9c9;border:1px solid #8499a2;width:100%;}
+.cuesTableTitlelessContainer {border-bottom:1px solid #8499a2;}
+.cuesTableTitle {font-size:12px;font-weight:bold;color:#000000;padding:2px 8px;line-height:16px;vertical-align:middle;}
+.cuesTableHeaderContainer {overflow:hidden;background-color:#d9e3e9;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;}
+.cuesTableHeaderDeadArea {background-color:#d9e3e9;border-right:1px solid #8499a2;}
+.cuesTableHeader {table-layout:fixed;white-space:nowrap;}
+.cuesTableHeader th {background-color:#d9e3e9;border-left:1px solid #a2b9c9;border-right:1px solid #ffffff;font-size:12px;color:#000000;font-weight:normal;padding:2px 8px;text-align:left;vertical-align:middle;line-height:16px;}
+.cuesTableHeader td {background-color:#d9e3e9;border-left:1px solid #a2b9c9;border-right:1px solid #ffffff;font-size:12px;color:#000000;font-weight:normal;padding:2px 8px;text-align:left;vertical-align:middle;line-height:16px;}
+.cuesTableContentContainer {height:50px;overflow:auto;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;background-color:#d9e3e9;}
+.cuesTableContent {table-layout:fixed;white-space:nowrap;}
+.cuesTableContent td {padding:2px 8px;line-height:18px;}
+.cuesTableNonscrollable {width:100%;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;}
+.cuesTableNonscrollable th {background-color:#d9e3e9;border-left:1px solid #a2b9c9;border-right:1px solid #ffffff;border-bottom:1px solid #8499a2;font-size:12px;color:#000000;font-weight:normal;padding:2px 8px;text-align:left;vertical-align:middle;line-height:16px;}
+.cuesTableNonscrollable td {padding:2px 8px;vertical-align:middle;line-height:18px;}
+.cuesTableSpecialContainer {overflow:hidden;background-color:#d9e3e9;border-left:1px solid #ffffff;border-right:1px solid #a2b9c9;border-bottom:1px solid #a2b9c9;}
+.cuesTableSpecial {table-layout:fixed;white-space:nowrap;}
+.cuesTableSpecial td {padding:2px 8px;}
+.cuesTableGroupContainer {background-color:#d9e3e9;}
+.cuesResizeColumnLayer {z-index:999;position:absolute;top:0;left:0;height:100%;width:100%;display:none;overflow:hidden;cursor:col-resize;opacity:.40;filter:alpha(opacity=40);background-color:#ffffff;}
+#cuesResizeColumnBox {position:absolute;top:0;left:0;width:20px;border:1px dashed black;background-color:#6b7485;}
+.cuesResizableTable td {overflow:hidden;}
+.cuesResizableTable th {overflow:hidden;}
+.cuesSortableColumn {padding-right:0px;}
+.cuesSortableColumnReserve {padding-right:20px;}
+.cuesSortableColumn:link {color:#000000;text-decoration:none;}
+.cuesSortableColumn:visited {color:#000000;text-decoration:none;}
+.cuesSortableColumn:hover {color:#000000;text-decoration:none;}
+.cuesSortableColumn:active {color:#000000;text-decoration:none;}
+.cuesSortednone {font-weight:normal;}
+.cuesSortedascending {font-weight:bold;}
+.cuesSorteddescending {font-weight:bold;}
+.cuesTableRowHover {background-color:#b7f3fd;}
+.cuesTableRowHover td {font-size:12px;color:#000000;border-left:1px solid #b7f3fd;border-right:1px solid #b7f3fd;}
+.cuesTableMultiFilterTogglerShown {padding:0px;margin-right:2px;}
+.cuesTableMultiFilterTogglerShown span {background-image:url(../cues_images/treetableExpandCollapse60.gif);background-repeat:no-repeat;background-position:-2 0;}
+.cuesTableMultiFilterTogglerHidden {padding:0px;margin-right:2px;}
+.cuesTableMultiFilterTogglerHidden span {background-image:url(../cues_images/treetableExpandCollapse60.gif);background-repeat:no-repeat;background-position:-16 0;}
+.cuesTableMultiFilterTogglerDisabled {padding:0px;margin-right:2px;}
+.cuesTableMultiFilterTogglerDisabled span {background-image:url(../cues_images/treetableExpandCollapse60.gif);background-repeat:no-repeat;background-position:-16 0;}
+.cuesTableSpan td {border-bottom:1px solid #a2b9c9;border-right:1px dotted #a2b9c9;}
+.cuesTableSelectionCountArea {background-color:#a2b9c9;color:#000000;font-style:italic;}
+* html .cuesTableSelectionCountArea {vertical-align:baseline;}
+.cuesTableBulkSelectionArea {background-color:#d9e3e9;height:21px;line-height:21px;}
+.cuesTableBulkSelectionArea td {border-top:1px solid #8499a2;text-align:center;}
+.cuesTableBulkSelectionContainer {padding:0px 8px;position:relative;word-spacing:nowrap;z-index:0;zoom:1;overflow:hidden;}
+.cuesTableBulkSelectionContainer a {color:#0088c2;text-size:12px;text-decoration:underline;}
+.cuesTableBulkSelectionContainer a:link {color:#0088c2;text-size:12px;text-decoration:underline;}
+.cuesTableBulkSelectionContainer a:hover {color:#0088c2;text-size:12px;text-decoration:underline;}
+.cuesTableBulkSelectionContainer a:active {color:#0088c2;text-size:12px;text-decoration:underline;}
+.cuesTableBulkSelectionContainer a:visited {color:#0088c2;text-size:12px;text-decoration:underline;}
+.cuesTableBulkSelectionLayer {background-color:#ffff99;position:absolute;top:0;left:0;width:2000px;height:100px;overflow:hidden;z-index:-2;zoom:1;}
+.cuesTableClearColumnFilter {cursor:pointer;visibility:hidden;height:15px;width:15px;position:relative;top:-3px;left:-21px;border:0px;background-color:white;vertical-align:middle;}
+* html .cuesTableClearColumnFilter {left:-17px !important;}
+.cuesTableClearColumnFilter img {height:12px;width:12px;vertical-align:middle;}
+/* tab */
+.cuesTabContentRowBg {width:100%;padding:0;margin:0;background-color:transparent;}
+.cuesTabNavRowBg {background-color:#6b7485;border-bottom:0px solid #dbdbdb;border-right:0px solid #858A91;border-left:0px solid #858A91;width:100%;margin:0;padding:0;}
+.cuesTabBgNonActive {text-align:center;width:100%;background-position:100%;background-image:url('../cues_images/tabBgNonActive.gif'); padding: 0px 3px 0px 6px;cursor:pointer;font-size:12px;}
+.cuesTabBgNonActiveContent {text-align:center;width:100%;background-position:100%;background-image:url('../cues_images/tabBgNonActiveContent.gif'); padding: 0px 3px 0px 6px;cursor:pointer;font-size:12px;}
+.cuesTabBgActiveNavTree {text-align:center;width:100%;background-position:100%;background-image:url('../cues_images/tabBgActiveNavTree.gif'); padding: 3px 2px 0px 6px;font-weight:bold;font-size:12px;}
+.cuesTabBgActiveNavDrawers {text-align:center;width:100%;background-position:100%;background-image:url('../cues_images/tabBgActiveNavDrawers.gif'); padding: 3px 2px 0px 6px;font-weight:bold;font-size:12px;}
+.cuesTabBgActiveContent {text-align:center;width:100%;background-position:100%;background-image:url('../cues_images/tabBgActiveContent.gif'); padding: 3px 2px 0px 6px;font-weight:bold;font-size:12px;}
+a.cuesTabLink:link {text-decoration:none;}
+a.cuesTabLink:visited {text-decoration:none;}
+a.cuesTabLink:hover {text-decoration:none;}
+a.cuesTabLink:active {text-decoration:none;}
+.cuesTabNavGapBelow {font-size:1px;line-height:8px;background-color:#dbdbdb;}
+.cuesTabContainer {z-index:0;position:relative;padding:2px 4px 2px 4px;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;overflow:hidden;}
+.cuesTabContainerIE {width:100%;}
+.cuesTabContainerFF {display:block;}
+.cuesTabContainerLayer {z-index:-1;position:absolute;top:0px;left:0px;padding:0px;height:2000px;width:3000px;overflow:hidden;background-color:#ffffff;opacity:.40;filter:alpha(opacity=40);}
+.cuesTabErrorIndicator {height:12px;width:12px;border:0;}
+.cuesTabLabel {color:transparent;font-size:1px;width:0px;height:0px;}
+.cuesActiveTab {position:relative;margin-top:0px;margin-bottom:0px;}
+.cuesNonactiveTab {position:relative;margin-top:0px;border-bottom:1px solid rgb(133,138,145);margin-bottom:0px;}
+.cuesNonactiveTabNonBottom {position:relative;margin-top:0px;margin-bottom:0px;}
+.cuesActiveTabNav {position:relative;margin-top:0px;margin-bottom:0px;}
+.cuesNonactiveTabNav {position:relative;margin-top:0px;border-bottom:1px solid #6b7485;margin-bottom:0px;}
+.cuesActiveTab img {vertical-align:top;margin-top:0px;}
+.cuesNonactiveTab img {vertical-align:top;margin-top:0px;}
+.cuesTab {position:relative;z-index:0;padding:0;margin:0;cursor:pointer;}
+.cuesTabCaption {padding-left:9px;padding-right:8px;padding-top:6px;padding-bottom:3px;}
+.cuesTabCaptionActive {font-weight:bold;color:#000000;}
+.cuesTabCaptionActive a:link {color:#000000;}
+.cuesTabCaptionActive a:active {color:#000000;}
+.cuesTabCaptionActive a:visited {color:#000000;}
+.cuesTabCaptionActive a:hover {color:#000000;}
+.cuesTabCaptionInactive {font-weight:normal;color:#000000;}
+.cuesTabCaptionInactive a:link {color:#000000;}
+.cuesTabCaptionInactive a:visited {color:#000000;}
+.cuesTabCaptionInactive a:hover {color:#000000;}
+.cuesTabCaptionInactive a:active {color:#000000;}
+.cuesTabGap {font-size:6px;border-bottom:1px solid #8499a2;}
+.cuesTabFiller {width:100%;font-size:6px;border-bottom:1px solid #8499a2;}
+.cuesTabContentsHeader {border-left:1px solid #8499a2;border-right:1px solid #8499a2;line-height:5px;background-color:#ffffff;}
+.cuesTabContents {padding:8px;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;background-color:#ffffff;}
+/* taskpanel */
+.cuesTaskPanel {z-index:1;padding:5 5 5 5;vertical-align:middle;font-weight:bold;font-size:12px;color:#ffffff;}
+#cuesTaskPanelTearoff {padding-right:2px;padding-left:2px;}
+#cuesTaskPanelTearoff img {border:0;height:16px;width:16px;vertical-align:middle;}
+#cuesTaskPanelCloser {padding-right:2px;padding-left:2px;}
+#cuesTaskPanelCloser img {border:0;height:16px;width:16px;vertical-align:middle;}
+.cuesTaskPanelContent {}
+/* toolbar */
+.cuesToolbarMain {height:31px;margin-left:14px;margin-right:16px;position:relative;overflow:hidden;margin-bottom:4px;}
+.cuesToolbarContent {height:31px;margin-left:10px;margin-right:10px;position:relative;overflow:hidden;}
+.cuesToolbarContainer {position:absolute;left:2px;top:1px;}
+.cuesToolbarCell {padding:0 7px; cursor:pointer;}
+.cuesToolbarEmptyCell {padding:0 0 0 6px; cursor:pointer;}
+.cuesToolbarCellDisabled {padding:0 7px; cursor:default;}
+.cuesToolbarEmptyCellDisabled {padding:0 0 0 6px; cursor:default;}
+.cuesToolbarIcon {margin:0 6px 0 0;vertical-align:middle;}
+a.cuesToolbarLink:link {color:#000000;text-decoration:none;}
+a.cuesToolbarLink:visited {color:#000000;text-decoration:none;}
+a.cuesToolbarLink:hover {color:#000000;text-decoration:none;}
+a.cuesToolbarLink:active {color:#000000;text-decoration:none;}
+.cuesToolbarDropdownCell {cursor:pointer;}
+.cuesToolbarDropdownCellDisabled {cursor:default;}
+.cuesToolbarField {padding:0 7px;white-space:nowrap;}
+/* transferbox */
+.cuesTransferboxButton {height:22px;width:30px;}
+.cuesTransferboxButton img {vertical-align:text-bottom;;margin-top:0px;}
+.cuesTransferboxSmallGap {line-height:4px;clear:both;}
+.cuesTransferboxLargeGap {line-height:27px;clear:both;}
+/* tree */
+.treeIcon {vertical-align:middle;}
+.treeCheckbox {margin-top:-3px;vertical-align:middle;}
+.treeRadiobutton {margin-top:-3px;vertical-align:middle;}
+.mixedtreeCheckbox {margin-top:-3px;vertical-align:middle;-moz-appearance:none;background-color:#c0c0c0;}
+.treeSelectedNode {background-color:#C0D1D9;}
+.cuesClienttreeToggler {margin-right:7px;}
+.cuesClienttreeChildren {margin-left:17px;}
+.cuesClienttreenodeFocus {background-color:#c0c0c0;}
+/* treetable */
+.cuesTreetableNodeExpanded {border:0px;width:16px;height:16px;cursor:pointer;background-color:transparent;background-image:url('../cues_images/treetableExpandCollapse60.gif');background-position:-2px;}
+.cuesTreetableNodeExpanded span {display:block;width:16px;background-color:transparent;}
+.cuesTreetableNodeCollapsed {border:0px;width:16px;height:16px;cursor:pointer;background-color:transparent;background-image:url('../cues_images/treetableExpandCollapse60.gif');background-position:-16px;}
+.cuesTreetableNodeCollapsed span {display:block;width:16px;background-color:transparent;}
+.cuesTreetableNodeLeaf {visibility:hidden;}
+/* wizard */
+.cuesWizardPaneInpage {padding:10px;border:1px solid #8499a2;background-image:url(../cues_images/ToolbarMain.png);}
+.cuesWizardTitleInpage {width:100%;text-align:left;margin-bottom:15px;margin-top:20px;font-size:18px;color:#000000;}
+.cuesWizardTitleInpageHidden {display:none;width:100%;}
+.cuesWizardContentInpage {text-align:left;padding:0px;}
+.cuesWizardContentInpageHidden {text-align:left;display:none;padding:0px;}
+#cuesWizardStepsInpage {text-align:left;}
+.cuesWizardStepInpageactive {display:inline;padding-left:17px;margin-right:4px;font-size:12px;color:#000000;font-weight:bold;}
+.cuesWizardStepInpageactiveerror {display:inline;padding-left:17px;margin-right:4px;background-image:url(../cues_icons/wizard_error.gif);background-repeat:no-repeat;background-position:0 50%;font-size:12px;color:#000000;font-weight:bold;}
+.cuesWizardStepInpagefuture {display:inline;padding-left:17px;margin-right:4px;font-size:12px;color:#8e8e8e;}
+.cuesWizardStepInpagecomplete {display:inline;padding-left:17px;margin-right:4px;background-image:url(../cues_icons/wizard_check.gif);background-repeat:no-repeat;background-position:0 50%;font-size:12px;color:#000000;}
+.cuesWizardStepInpagecompleteerror {display:inline;padding-left:17px;margin-right:4px;background-image:url(../cues_icons/wizard_error.gif);background-repeat:no-repeat;background-position:0 50%;font-size:12px;color:#000000;}
+.cuesWizardPage {padding:8px;background-color:#d9e3e9;}
+.cuesWizardPane {border:1px solid #8499a2;background-color:#ffffff;}
+.cuesWizardLeftPane {background-color:#ffffff;}
+.cuesWizardContentPane {background-color:#ffffff;}
+.cuesWizardContent {padding:14px;}
+.cuesWizardContentHidden {display:none;padding:14px;}
+.cuesWizardTitle {width:100%;text-align:left;margin-bottom:15px;font-size:14px;color:#53636a;}
+.cuesWizardTitleHidden {display:none;width:100%;}
+.cuesWizardStepactive {padding-left:19px;margin-bottom:6px;margin-left:7px;margin-right:14px;line-height:22px;background-color:#8db71f;font-size:12px;color:#ffffff;font-weight:bold;}
+.cuesWizardStepactiveerror {padding-left:19px;margin-bottom:6px;margin-left:7px;margin-right:14px;background-image:url(../cues_icons/wizard_error.gif);background-repeat:no-repeat;background-position:0 50%;line-height:22px;background-color:#8db71f;font-size:12px;color:#ffffff;font-weight:bold;}
+.cuesWizardStepfuture {padding-left:19px;margin-bottom:6px;margin-left:7px;margin-right:14px;line-height:22px;font-size:12px;color:#8e8e8e;}
+.cuesWizardStepcomplete {padding-left:19px;margin-bottom:6px;margin-left:7px;margin-right:14px;background-image:url(../cues_icons/wizard_check.gif);background-repeat:no-repeat;background-position:0 50%;line-height:22px;font-size:12px;color:#000000;}
+.cuesWizardStepcompleteerror {padding-left:19px;margin-bottom:6px;margin-left:7px;margin-right:14px;background-image:url(../cues_icons/wizard_error.gif);background-repeat:no-repeat;background-position:0 50%;line-height:22px;font-size:12px;color:#000000;}
+#cuesWizardNav {}

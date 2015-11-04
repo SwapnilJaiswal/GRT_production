@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>Display file upload form to the user</TITLE>
+</HEAD>
+<script>
+
+var hash = {
+		  //'xls'  : 1,
+		  'xlsx' : 1,
+		};
+
+		function check_extension(filename) {
+		      var re = /\..+$/;
+		      var ext = filename.match(/xlsx$/);
+		      var submitEl = document.getElementById("upload");
+		      if (hash[ext]) {
+		        submitEl.disabled = false;
+		        return true;
+		      } else {
+		        alert("Invalid File, please select only xlsx file");
+		        submitEl.disabled = true;
+
+		        return false;
+		      }
+		}
+		
+function confirmation()
+{
+	var reply = confirm("All the current entries in the database will be flushed out! Do you want to proceed ahead");
+	if(reply==true)
+		return true;
+	else
+		return false;
+}
+</script>
+<BODY>
+<FORM ENCTYPE="multipart/form-data" ACTION="Upload.jsp" METHOD=POST>
+<br>
+<br>
+<br>
+<center>
+<table border="0" bgcolor=#ccFDDEE>
+      <tr>
+            <center>
+            <td colspan="2" align="center"><B>UPLOAD THE FILE</B>
+            <center>
+            </td>
+      </tr>
+      <tr>
+            <td colspan="2" align="center"></td>
+      </tr>
+      <tr>
+            <td><b>Choose the file To Upload:</b></td>
+            <td><INPUT NAME="file" TYPE="file" onchange="check_extension(this.value);"/></td>
+      </tr>
+      <tr>
+            <td colspan="2" align="center"></td>
+      </tr>
+      <tr>
+            <td colspan="2" align="center"><input type="submit" id="upload"
+                  value="Upload File" onclick="return confirmation();"></td>
+      </tr>
+      <table>
+            </center>
+            </FORM>
+</BODY>
+</HTML>

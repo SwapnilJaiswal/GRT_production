@@ -1,0 +1,61 @@
+<html>
+<head>
+<script type="text/javascript" src="./js/jquery.loadJSON.js">
+</script>
+<script>
+
+function load()
+{
+	var data = {"ID":17,"Name":"Emkay Entertainments","Address":"Nobel House, Regent Centre","Town":"Lothian","Contact":"Phone","IsFeatured": true}
+	$('form').loadJSON(data);	
+}
+
+</script>
+</head>
+<body onload="load()">
+
+<form name="form_simple" id="form-simple" action="details.html" method="get">
+ 
+    <input type="hidden" id="ID" name="ID" />
+ 
+    <label for="Name">Name</label>
+ 
+    <input name="Name" id="Name" type="text" /><br>
+ 
+    <label for="Address">Address</label>
+ 
+    <textarea name="Address" id="Address" rows="5" cols="20"></textarea>
+    <br>
+ 
+    <label for="Country">Country</label>
+    <select name="Country" multiple="multiple">
+        <option value="">-</option>
+        <option value="UK">United Kingdom</option>
+        <option value="SRB">Serbia</option>
+        <option value="USA">United States of America</option>
+        <option value="FRA">France</option>  
+    </select>
+ 	<br>
+    <label for="IsFeatured">Is Featured</label>
+    <input name="IsFeatured" id="IsFeatured" type="checkbox" value="true"/>
+ 	<br>
+    <label for="Town">Town</label>
+    <select name="Town" id="Town">
+        <option value="" selected="selected">-</option>
+        <option value="London">London City</option>
+        <option value="Liverpool">Liverpool City</option>
+        <option value="Lothian">Lothian City</option>
+        <option value="Newcastle">Newcastle City</option>
+        <option value="Buckinghamshire">Buckinghamshire City</option>
+        <option value="Essex">Essex City</option>  
+    </select>
+ 	<br>
+    <label for="Contact">Contact</label>
+        <input name="Contact" type="radio" value="Email"/> Email
+        <input name="Contact" type="radio" value="Phone" /> Phone
+        <input name="Contact" type="radio" value="Post" /> Post
+ 	<br>
+    <input type="submit" value="Details" class="submit-button" />
+</form>
+</body>
+</html>

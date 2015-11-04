@@ -1,0 +1,1 @@
+<% response.sendRedirect("./CEC_Login"); %>

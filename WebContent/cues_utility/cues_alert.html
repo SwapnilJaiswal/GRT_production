@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>Alert</title>
+<style>
+body        {font-family:Arial;color:#000000;font-size:12px;}
+td          {font-family:Arial;color:#000000;font-size:12px;}
+.cuesMsgNum {font-family:Arial;color:#000000;font-size:11px;padding-top:10px;}
+.cuesButton {font-family:Arial;color:#000000;font-size:12px;margin:0 0 0 3px;}
+</style>
+</head>
+<body style="padding:13px;margin:0;overflow:hidden;" onload="resize()">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top">
+<script>
+  try
+  {
+    var content = "<img alt='' title='' src='"+window.dialogArguments[3]+"'/>";
+    document.write(content);
+  }catch(e){}
+</script>
+</td>
+<td valign="top" style="width:100%;padding-left:15px;">
+<script>
+  try
+  {
+    var content = "";
+    switch(window.dialogArguments[1])
+    {
+      case "Alert":
+      case "Confirm":
+      case "Confirm2":
+        content = window.dialogArguments[2];
+        break;
+      case "Prompt":
+        content = "<nobr><form style='display:inline;' onsubmit='window.returnValue=document.getElementById(\"promptvalue\").value;window.close();return false;'>"+window.dialogArguments[2]+": <input type='text' size='12' id='promptvalue'/></form></nobr>";
+        break;
+    }
+    document.write(content);
+  }catch(e){}
+</script>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<div id="alerttype" style="display:none;margin-top:20px;">
+<input id="b1" type="button" class="cuesButton" onclick="window.close()" value=" OK "/>
+</div>
+<div id="prompttype" style="display:none;margin-top:20px;">
+<input id="b2" type="button" class="cuesButton" onclick="window.returnValue=document.getElementById('promptvalue').value;window.close()" value=" OK "/>
+<input id="b3" type="button" class="cuesButton" onclick="window.returnValue=null;window.close()" value=" Cancel "/>
+</div>
+<div id="confirmtype" style="display:none;margin-top:20px;">
+<input id="b4" type="button" class="cuesButton" onclick="window.returnValue=true;window.close()" value=" Yes "/>
+<input id="b5" type="button" class="cuesButton" onclick="window.returnValue=false;window.close()" value=" No "/>
+</div>
+</td>
+</tr>
+<script>
+  try
+  {
+    if(window.dialogArguments[5]!=null)
+    {
+      var content = '<tr><td class="cuesMsgNum" colspan="2">'+window.dialogArguments[4][7]+':'+window.dialogArguments[5]+'</td></tr>';
+      document.write(content);
+      document.body.style.paddingBottom="2px";
+    }
+  }catch(e){}
+</script>
+</table>
+</body>
+<script>
+  try
+  {
+    switch(window.dialogArguments[1])
+    {
+      case "Alert":
+        document.getElementById("alerttype").style.display="";
+        document.title = window.dialogArguments[4][8]==null?
+                           window.dialogArguments[4][0]:
+                           window.dialogArguments[4][8];
+        document.getElementById("b1").value = " "+window.dialogArguments[4][3]+" ";
+        document.getElementById("b1").focus();
+        break;
+      case "Confirm":
+        document.getElementById("confirmtype").style.display="";
+        document.title = window.dialogArguments[4][8]==null?
+                           document.title = window.dialogArguments[4][1]:
+                           window.dialogArguments[4][8];
+        document.getElementById("b4").value = " "+window.dialogArguments[4][5]+" ";
+        document.getElementById("b5").value = " "+window.dialogArguments[4][6]+" ";
+        document.getElementById("b4").focus();
+        break;
+      case "Confirm2":
+        document.getElementById("confirmtype").style.display="";
+        document.title = window.dialogArguments[4][8]==null?
+                           document.title = window.dialogArguments[4][1]:
+                           window.dialogArguments[4][8];
+        document.getElementById("b4").value = " "+window.dialogArguments[4][3]+" ";
+        document.getElementById("b5").value = " "+window.dialogArguments[4][4]+" ";
+        document.getElementById("b4").focus();
+        break;
+      case "Prompt":
+        document.getElementById("prompttype").style.display="";
+
+        document.title = window.dialogArguments[4][8]==null?
+                           window.dialogArguments[4][2]:
+                           window.dialogArguments[4][8];
+        document.getElementById("b2").value = " "+window.dialogArguments[4][3]+" ";
+        document.getElementById("b3").value = " "+window.dialogArguments[4][4]+" ";      
+        document.getElementById("promptvalue").focus();
+        break;
+    }
+  }catch(e){}
+
+function resize()
+{
+  var ch = document.body.clientHeight;
+  var oh = document.body.offsetHeight;
+  var sh = document.body.scrollHeight;
+  if(sh-ch > 0)
+  {
+    try
+    {
+      if(window.dialogHeight != null) 
+      {
+        window.dialogHeight = (parseInt(window.dialogHeight)+(sh-ch))+"px";
+      }
+      else
+      {
+        window.outerHeight -= (ch-oh);
+      }
+    }catch(e){}
+  }
+  var cw = document.body.clientWidth;
+  var ow = document.body.offsetWidth;
+  var sw = document.body.scrollWidth;
+  if(sw-ow > 0)
+  {
+    try
+    {
+      if(window.dialogWidth != null) 
+      {
+        window.dialogWidth = (parseInt(window.dialogWidth)+(sw-cw+6))+"px";
+      }
+      else
+      {
+        window.outerWidth += (sw-cw)+16;
+      }
+    }catch(e){}
+  }
+}
+</script>
+</html>
