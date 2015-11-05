@@ -6,7 +6,51 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+
 <title>Competency</title>
+
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    
+<link rel="stylesheet" href="css/normalize.css">
+
+    
+        <link rel="stylesheet" href="css/style1.css">
+        
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+<script>
+    webshims.setOptions('forms-ext', {types: 'date'});
+webshims.polyfill('forms forms-ext');
+</script>
+
+<!-- <!-- cdn for modernizr, if you haven't included it already -->
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+<script>
+  webshims.setOptions('waitReady', false);
+  webshims.setOptions('forms-ext', {types: 'date'});
+  webshims.polyfill('forms forms-ext');
+</script> 
+       
+<style type="text/css">
+#wat {
+   display: none; /* onLoad your div will be hidden */
+}
+
+#igg {
+   display: none; /* onLoad your div will be hidden */
+}
+#grr {
+   display: none; /* onLoad your div will be hidden */
+}
+
+
+</style> 
 
 <style>
 html, body, div, span, applet, object, iframe,
@@ -2400,12 +2444,24 @@ width:100%;
 <div>
     
 		<div style = "width:80%;background:white">
-        <form name="form" id="form" method="post" action="ModifyEntry" enctype='multipart/form-data'>
 		
-            <div class="login" style="float: left; margin-left:10%;border-right: 1px solid grey; border-left: 1px solid grey;width:100%;background:white">
+		
+		<div class="form">
+      
+     
+        <form name="form" id="form" method="post" action="ModifyEntry" enctype='multipart/form-data'>
+        
+        <div class="tab-content">
+        
+       
+        
+		
+<!--             <div class="login" style="float: left; margin-left:10%;border-right: 1px solid grey; border-left: 1px solid grey;width:100%;background:white"> -->
                 <h1>GRT ID -- <label id ="SNo" name='SNo'></label> </h1>
                 
                 <%-- adding owner transition by state by shivam--%> 
+					
+					
 					
 					<table class="status" id='status'>
 						<tr>
@@ -2480,6 +2536,104 @@ width:100%;
 						
 							
 				<%-- ending shivam code--%> 
+                
+                
+                 <ul class="tab-group">
+        
+        
+        <%-- adding owner transition by state by nanallu--%> 
+        
+        
+        
+        <%-- adding owner transition by state by nanallu--%> 
+        
+        
+        
+        <li class="tab active"><a href="#signup">General information</a></li>
+        <li class="tab" ><a href="#igg">Inter GDC Governance</a></li>
+        <li class="tab"><a href="#wat">Work Assignment</a></li>
+        <li class="tab"><a href="#grr">Attachments</a></li>
+     
+      </ul>
+         <div id="signup">
+                
+                <!--Division 2 Starts-->
+			<table class="classification" id="classification">
+						<tr>
+							<th class="theader">General Information</th>
+							<td><br />
+							<br /></td>
+						</tr>
+						<tbody>
+							
+							<tr>
+								<td align="left">Account Name: <font color='red'> *
+								</font></td>
+
+								<td align="left"><input type="text" name="AccountName"
+									id="AccountName" placeholder="" style="width:300px;" required /></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td align="left">DUID :</td><td align="left"><input type="text" name="DUID" id="DUID" maxlength="7"
+									onkeypress="return isNumber(event)" style="width: 300px">
+									
+									</td></tr>
+								<tr>	
+								<td align="left">Account NCE Name: <font color='red'>
+										* </font></td>
+								<td align="left"><input type="text" name="AccountNCEName"
+									id="AccountNCEName" placeholder="Enter CEC ID"  style="width:300px;" required></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>	
+								<td>PID: <font color='red' id = "pidmand">
+										* </font></td><td align="left"><input type="text" name="Pid" id="Pid" maxlength="6"
+									onkeypress="return isNumber(event)" style="width: 300px"></td>	
+
+							</tr>
+
+							<tr>
+								<td align="left">Requested By: <font color='red'> *
+								</font></td>
+
+								<td align="left"><input type="text" name="RequestedBy"
+									id="RequestedBy" placeholder="Enter CEC ID" style="width:300px;" required /></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>		
+								<td align="left">Task: <font color='red' id = "taskmand">
+										* </font></td><td align="left"><input type="text" name="Task" id="Task" style=" width:300px"></td>
+							</tr>
+	
+							<tr>
+								
+								<td align="left">Delivery Model: <font color='red'>
+										* </font></td>
+								<td align="left"><select name="DeliveryModel"
+									id="DeliveryModel" style="width:320px" required>
+										<option selected="selected" value="" style="display: none;"
+											disabled="disabled">Select</option>
+										<option value="E2E">E2E</option>
+										<option value="NES">NES</option>
+										<option value="OND">OND</option>
+										<option value="SPOC">SPOC</option>
+										<option value="Other">Other</option>
+								</select></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td align="left">CAP Id:</td>
+								<td align="left"><input type="text" name="CapId" id="CapId"	 style="width:300px" placeholder="" onblur="makePIDTaskmandatory();"/></td>
+							</tr>
+							
+							<tr><td colspan="100%">
+								<br />
+								<hr />
+								<br />
+							</td>	
+							</tr>
+						</tbody>
+					</table>
+				<!--Division 2 Ends-->	
+
+                </div>
+                
+                <div id="igg">
+                
+                
                 
                 
                 <table style="width:100%%">
@@ -2724,79 +2878,7 @@ width:100%;
 
 
 
-			<!--Division 2 Starts-->
-			<table class="classification" id="classification">
-						<tr>
-							<th class="theader">General Information</th>
-							<td><br />
-							<br /></td>
-						</tr>
-						<tbody>
-							
-							<tr>
-								<td align="left">Account Name: <font color='red'> *
-								</font></td>
-
-								<td align="left"><input type="text" name="AccountName"
-									id="AccountName" placeholder="" style="width:300px;" required /></td>
-								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-								<td align="left">DUID :</td><td align="left"><input type="text" name="DUID" id="DUID" maxlength="7"
-									onkeypress="return isNumber(event)" style="width: 300px">
-									
-									</td></tr>
-								<tr>	
-								<td align="left">Account NCE Name: <font color='red'>
-										* </font></td>
-								<td align="left"><input type="text" name="AccountNCEName"
-									id="AccountNCEName" placeholder="Enter CEC ID"  style="width:300px;" required></td>
-								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>	
-								<td>PID: <font color='red' id = "pidmand">
-										* </font></td><td align="left"><input type="text" name="Pid" id="Pid" maxlength="6"
-									onkeypress="return isNumber(event)" style="width: 300px"></td>	
-
-							</tr>
-
-							<tr>
-								<td align="left">Requested By: <font color='red'> *
-								</font></td>
-
-								<td align="left"><input type="text" name="RequestedBy"
-									id="RequestedBy" placeholder="Enter CEC ID" style="width:300px;" required /></td>
-								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>		
-								<td align="left">Task: <font color='red' id = "taskmand">
-										* </font></td><td align="left"><input type="text" name="Task" id="Task" style=" width:300px"></td>
-							</tr>
-	
-							<tr>
-								
-								<td align="left">Delivery Model: <font color='red'>
-										* </font></td>
-								<td align="left"><select name="DeliveryModel"
-									id="DeliveryModel" style="width:320px" required>
-										<option selected="selected" value="" style="display: none;"
-											disabled="disabled">Select</option>
-										<option value="E2E">E2E</option>
-										<option value="NES">NES</option>
-										<option value="OND">OND</option>
-										<option value="SPOC">SPOC</option>
-										<option value="Other">Other</option>
-								</select></td>
-								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-								<td align="left">CAP Id:</td>
-								<td align="left"><input type="text" name="CapId" id="CapId"	 style="width:300px" placeholder="" onblur="makePIDTaskmandatory();"/></td>
-							</tr>
-							
-							<tr><td colspan="100%">
-								<br />
-								<hr />
-								<br />
-							</td>	
-							</tr>
-						</tbody>
-					</table>
-				<!--Division 2 Ends-->	
-
-
+			
 					<!--Division 3 SORA -->
 					<table class="sora" id='sora'>
 						<tr>
@@ -3303,39 +3385,9 @@ width:100%;
 
 
 
-					<!--Division 9 Golden Rules -->
-					<table class="Div9" name="Div9" id="Div9">
-						<tr>
-							<th class="theader" style="text-align: left">Golden Rules</th>
-							<td><br />
-							<br /></td>
-						</tr>
-						<tr>
-							<td>Please use the text box to either provide a link to
-								Golden Rules or to detail in free text the Golden Rules to be
-								followed.</td>
-						</tr>
-						<tr>
-							<td><br /></td>
-						</tr>
-						<tr>
-							<td colspan='100%'><textarea rows="10" cols="100"
-									name="Golden" id="Golden"
-									onKeyDown="charLimit(this.form.Golden,this.form.countdown,10000);"
-									style="overflow-y: scroll; width: 100%; height: 200px"></textarea>
-							</td>
-
-						</tr>
-						<tr><td colspan="100%">
-								<br />
-								<hr />
-								<br />
-							</td>	
-							</tr>
-					</table>
-					<!--Division 9 ends -->
-
-
+		
+</div>
+<div id="wat">
 
 
 					<!--Division 10 Work Assignment -->
@@ -3448,12 +3500,57 @@ width:100%;
 											</div>
 											
 											
+				<div id="grr">							
+														<!--Division 9 Golden Rules -->
+					<table class="Div9" name="Div9" id="Div9">
+						<tr>
+							<th class="theader" style="text-align: left">Golden Rules</th>
+							<td><br />
+							<br /></td>
+						</tr>
+						<tr>
+							<td>Please use the text box to either provide a link to
+								Golden Rules or to detail in free text the Golden Rules to be
+								followed.</td>
+						</tr>
+						<tr>
+							<td><br /></td>
+						</tr>
+						<tr>
+							<td colspan='100%'><textarea rows="10" cols="100"
+									name="Golden" id="Golden"
+									onKeyDown="charLimit(this.form.Golden,this.form.countdown,10000);"
+									style="overflow-y: scroll; width: 100%; height: 200px"></textarea>
+							</td>
+
+						</tr>
+						<tr><td colspan="100%">
+								<br />
+								<hr />
+								<br />
+							</td>	
+							</tr>
+					</table>
+					<!--Division 9 ends -->
+
+											
+											</div>
+											</div>
+											
+											
+											
+											
+											
+											
              
+            </div>
             </div>
 			</form>
 			</div>
-    </div>
+  
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
+        <script src="js/index.js"></script>
 </body>
 
  

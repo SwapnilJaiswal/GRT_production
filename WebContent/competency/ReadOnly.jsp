@@ -8,6 +8,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Competency</title>
 
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    
+<link rel="stylesheet" href="css/normalize.css">
+
+    
+        <link rel="stylesheet" href="css/style1.css">
+        
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+<script>
+    webshims.setOptions('forms-ext', {types: 'date'});
+webshims.polyfill('forms forms-ext');
+</script>
+
+<!-- <!-- cdn for modernizr, if you haven't included it already -->
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+
 <style>
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -2363,7 +2384,25 @@ function mycurrentsituation() {
 
 <%-- ending progress bar by shivam--%> 
 
-<div>
+
+<!-- swapnil -->
+
+<div class="form">
+      
+      <ul class="tab-group">
+        
+        
+        <li class="tab active"><a href="#signup">General information</a></li>
+        <li class="tab" ><a href="#igg">Inter GDC Governance</a></li>
+        <li class="tab"><a href="#wat">Work Assignment</a></li>
+        <li class="tab"><a href="#grr">Attachments</a></li>
+     
+      </ul>
+      
+       
+       <!-- <form name="form" id="form" method="post" action="NewEntry" enctype='multipart/form-data'> -->
+<div class="tab-content">
+
     
     
 		<div style = "width:80%;background:white">
@@ -2424,6 +2463,7 @@ function mycurrentsituation() {
 </div>
 </div>					
 					
+<div id="signup">					
 					<table class="status" id='status'>
 						<tr>
 							<th class="theader">Status</th>
@@ -2438,7 +2478,7 @@ function mycurrentsituation() {
 								<td align="left"><select name="Owner"
 									id="Owner" style="width:320px" required>
 										<option selected="selected" value="" style="display: none;"
-											disabled="disabled">Select</option>
+											 >Select</option>
 										<option value="staffer">staffer</option>
 										<option value="requester">requester</option>
 										<option value="screener">screener</option>
@@ -2466,7 +2506,7 @@ function mycurrentsituation() {
 								<td align="left"><select name="State"
 									id="State" style="width:320px" required>
 										<option selected="selected" value="" style="display: none;"
-											disabled="disabled">Select</option>
+											>Select</option>
 										<option value="New">NEW</option>
 										<option value="Open">OPEN</option>
 										<option value="Staffing">STAFFING</option>
@@ -2497,6 +2537,84 @@ function mycurrentsituation() {
 						
 							
 				<%-- ending shivam code--%> 
+				
+				
+				
+							<!--Division 2 Starts-->
+			<table class="classification" id="classification">
+						<tr>
+							<th class="theader">General Information</th>
+							<td><br />
+							<br /></td>
+						</tr>
+						<tbody>
+							
+							<tr>
+								<td align="left">Account Name: <font color='red'> *
+								</font></td>
+
+								<td align="left"><input type="text" name="AccountName"
+									id="AccountName" placeholder="" style="width:300px;" required /></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td align="left">DUID :</td><td align="left"><input type="text" name="DUID" id="DUID" maxlength="7"
+									onkeypress="return isNumber(event)" style="width: 300px">
+									
+									</td></tr>
+								<tr>	
+								<td align="left">Account NCE Name: <font color='red'>
+										* </font></td>
+								<td align="left"><input type="text" name="AccountNCEName"
+									id="AccountNCEName" placeholder="Enter CEC ID"  style="width:300px;" required></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>	
+								<td>PID:</td><td align="left"><input type="text" name="Pid" id="Pid" maxlength="6"
+									onkeypress="return isNumber(event)" style="width: 300px"></td>	
+
+							</tr>
+
+							<tr>
+								<td align="left">Requested By: <font color='red'> *
+								</font></td>
+
+								<td align="left"><input type="text" name="RequestedBy"
+									id="RequestedBy" placeholder="Enter CEC ID" style="width:300px;" required /></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>		
+								<td align="left">Task:</td><td align="left"><input type="text" name="Task" id="Task" style=" width:300px"></td>
+							</tr>
+	
+							<tr>
+								
+								<td align="left">Delivery Model: <font color='red'>
+										* </font></td>
+								<td align="left"><select name="DeliveryModel"
+									id="DeliveryModel" style="width:320px" required>
+										<option selected="selected" value="" style="display: none;"
+											disabled="disabled">Select</option>
+										<option value="E2E">E2E</option>
+										<option value="NES">NES</option>
+										<option value="OND">OND</option>
+										<option value="SPOC">SPOC</option>
+										<option value="Other">Other</option>
+								</select></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td align="left">CAP Id:</td>
+								<td align="left"><input type="text" name="CapId" id="CapId"	 style="width:300px" placeholder="" /></td>
+							</tr>
+							
+							<tr><td colspan="100%">
+								<br />
+								<hr />
+								<br />
+							</td>	
+							</tr>
+						</tbody>
+					</table>
+				<!--Division 2 Ends-->	
+				
+		</div>		
+				
+				
+	
+	<div id="igg">			
                 
                 
                 <table style="width:100%%">
@@ -2743,75 +2861,9 @@ function mycurrentsituation() {
 
 
 
-			<!--Division 2 Starts-->
-			<table class="classification" id="classification">
-						<tr>
-							<th class="theader">General Information</th>
-							<td><br />
-							<br /></td>
-						</tr>
-						<tbody>
-							
-							<tr>
-								<td align="left">Account Name: <font color='red'> *
-								</font></td>
+</div>
 
-								<td align="left"><input type="text" name="AccountName"
-									id="AccountName" placeholder="" style="width:300px;" required /></td>
-								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-								<td align="left">DUID :</td><td align="left"><input type="text" name="DUID" id="DUID" maxlength="7"
-									onkeypress="return isNumber(event)" style="width: 300px">
-									
-									</td></tr>
-								<tr>	
-								<td align="left">Account NCE Name: <font color='red'>
-										* </font></td>
-								<td align="left"><input type="text" name="AccountNCEName"
-									id="AccountNCEName" placeholder="Enter CEC ID"  style="width:300px;" required></td>
-								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>	
-								<td>PID:</td><td align="left"><input type="text" name="Pid" id="Pid" maxlength="6"
-									onkeypress="return isNumber(event)" style="width: 300px"></td>	
 
-							</tr>
-
-							<tr>
-								<td align="left">Requested By: <font color='red'> *
-								</font></td>
-
-								<td align="left"><input type="text" name="RequestedBy"
-									id="RequestedBy" placeholder="Enter CEC ID" style="width:300px;" required /></td>
-								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>		
-								<td align="left">Task:</td><td align="left"><input type="text" name="Task" id="Task" style=" width:300px"></td>
-							</tr>
-	
-							<tr>
-								
-								<td align="left">Delivery Model: <font color='red'>
-										* </font></td>
-								<td align="left"><select name="DeliveryModel"
-									id="DeliveryModel" style="width:320px" required>
-										<option selected="selected" value="" style="display: none;"
-											disabled="disabled">Select</option>
-										<option value="E2E">E2E</option>
-										<option value="NES">NES</option>
-										<option value="OND">OND</option>
-										<option value="SPOC">SPOC</option>
-										<option value="Other">Other</option>
-								</select></td>
-								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-								<td align="left">CAP Id:</td>
-								<td align="left"><input type="text" name="CapId" id="CapId"	 style="width:300px" placeholder="" /></td>
-							</tr>
-							
-							<tr><td colspan="100%">
-								<br />
-								<hr />
-								<br />
-							</td>	
-							</tr>
-						</tbody>
-					</table>
-				<!--Division 2 Ends-->	
 
 
 					<!--Division 3 SORA -->
@@ -3442,6 +3494,12 @@ function mycurrentsituation() {
 											
 											</table>
 											</div>
+		
+		</div>	
+		</div>								
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
 											
 </body>
 

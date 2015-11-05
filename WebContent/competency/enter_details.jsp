@@ -8,8 +8,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Competency Request Create</title>
 
-<link rel="stylesheet" href="./css/styleQueryForm.css">
-<link rel="stylesheet" href="./css/jquery.timepicker.css">
+<!--  <link rel="stylesheet" href="./css/styleQueryForm.css">
+<link rel="stylesheet" href="./css/jquery.timepicker.css">-->
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    
+<link rel="stylesheet" href="css/normalize.css">
+
+    
+        <link rel="stylesheet" href="css/style1.css">
+
 
 <link rel="stylesheet" type="text/css"
 	href="./css/jquery.autocomplete.css" />
@@ -25,7 +32,24 @@
   <script src="./js/searchautocomplete/chosen.jquery.min.js"></script>
   <link rel="stylesheet" href="./js/searchautocomplete/chosen.css">
 
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+<script>
+    webshims.setOptions('forms-ext', {types: 'date'});
+webshims.polyfill('forms forms-ext');
+</script>
 
+<!-- <!-- cdn for modernizr, if you haven't included it already -->
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+<script>
+  webshims.setOptions('waitReady', false);
+  webshims.setOptions('forms-ext', {types: 'date'});
+  webshims.polyfill('forms forms-ext');
+</script> 
 
 <style>
 td {
@@ -41,9 +65,22 @@ width:100%;
 	margin-top: 20px;
 }
 </style>
+<style type="text/css">
+#wat {
+   display: none; /* onLoad your div will be hidden */
+}
 
+#igg {
+   display: none; /* onLoad your div will be hidden */
+}
+#grr {
+   display: none; /* onLoad your div will be hidden */
+}
+
+
+</style>
 <script>  
-	var pidValidated = false;
+	
     var CurrentFiscalQuarter, Current_Year,Current_month;
     $(function() {
     	
@@ -89,10 +126,6 @@ function validate_form(){
 		}
 		else if(task=="" && pid != ""){
 			alert("Please enter Task");
-			return false;
-		}
-		else if(pidValidated == false){
-			alert("Please input pid and validate it");
 			return false;
 		}
 		
@@ -553,69 +586,11 @@ function check(value,textbox){
 function charLimit(limitField, limitCount, limitNum) {
     if (limitField.value.length > limitNum) {
       limitField.value = limitField.value.substring(0, limitNum);
-    } else {
+  } else {
       limitCount.value = limitNum - limitField.value.length;
+       }
     }
-}
-
-function isValid(evt){
-	evt = (evt) ? evt : window.event;
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-    	alert("Please Enter only numerals");
-        return false;
-    }
-    
-    else if (charCode == 13 && document.getElementById('Pid').value.length == 6 ){
-    	runValidatePID();
-    }
-    
-    else 
-    	pidValidated = false;
-}
-
-//function to connect to 'ValidatePID' servlet
-function runValidatePID(){
-	var xmlhttp,pidParam;
-	pidParam = "pid="+document.getElementById('Pid').value;
-	
-	if (window.XMLHttpRequest)
-	{// code to create XMLHttpRequest object for IE7+, Firefox, Chrome, Opera, Safari
-		xmlhttp=new XMLHttpRequest();
-	}
-	else
-	{// code to create XMLHttpRequest object for IE7+, Firefox, Chrome, Opera, Safari
-		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-
-	//Handling response for xmlhttp
-	xmlhttp.onreadystatechange=function()
-	{
-		if (xmlhttp.readyState==4 && xmlhttp.status==200)
-	    {
-	    	if(xmlhttp.responseText == 0){
-	    		alert("Pid entered is invalid. Please enter a valid pid");
-	    		pidValidated = false;
-	    		return false;
-	    	}
-	    	else{
-	    		alert("Pid is validated");
-	    		pidValidated = true;
-	    		return true;
-	    	}
-	    }
-	}
-	
-	xmlhttp.onerror=function()
-	{
-		alert("error occurred");
-	}    	
-	
-	//xmlhttp.open('GET', '/GRT/ValidatePID'+'?'+pidParam, true);
-	xmlhttp.open('GET', '/ROOT/ValidatePID'+'?'+pidParam, true);
-	xmlhttp.send(null);
-}
+   
 
 function isNumber(evt) {
     evt = (evt) ? evt : window.event;
@@ -629,6 +604,7 @@ function isNumber(evt) {
     
     
   function numberAndDecimal(evt){
+	 
 	  evt = (evt) ? evt : window.event;
 	    var charCode = (evt.which) ? evt.which : evt.keyCode;
 	    if (charCode !=46 && (charCode > 31 && (charCode < 48 || charCode > 57))) {
@@ -1693,16 +1669,539 @@ function setServiceOwner(){
 </head>
 <body onload="getAssignees();">
 
+<div class="form">
+      
+      <ul class="tab-group">
+        
+        
+        <%-- adding owner transition by state by nanallu--%> 
+        
+        
+        
+        <%-- adding owner transition by state by nanallu--%> 
+        
+        
+        
+        <li class="tab active"><a href="#signup">General information</a></li>
+        <li class="tab" ><a href="#igg">Inter GDC Governance</a></li>
+        <li class="tab"><a href="#wat">Work Assignment</a></li>
+        <li class="tab"><a href="#grr">Attachments</a></li>
+     
+      </ul>
+      
+       
+       <form name="form" id="form" method="post" action="NewEntry" enctype='multipart/form-data'>
+<div class="tab-content">
+
+<%-- General Info href starts--%> 
+
+<div id="signup">
+
+<table>
+<tr>
+<td class="field-wrap"><label>Owner:</label><font color='red'>* </font></td>
+ <td align="left"><select  name="Owner" id="Owner" style="width:320px" required>
+										<option selected="selected" value="" style="display: none;"
+											disabled="disabled">Select</option>
+										<option value="staffer">staffer</option>
+										<option value="requester">requester</option>
+										<option value="screener">screener</option>
+										<option value="PNCE">PNCE</option>
+										<option value="reviewer">reviewer</option>
+								</select>
+</tr>
+		
+<tr>				
+		
+<td><label>Account NCE Name:</label> <font color='red'>* </font></td>
+<td align="left"><input type="text" name="AccountNCEName" id="AccountNCEName" placeholder="Enter CEC ID"  style="width:300px;" required>
+</td>
+</tr>
+</table>
+
+<table class="classification" id="classification">
+						<tr>
+							<th class="theader">General Information</th>
+							
+						</tr>
+						<tbody>
+							
+							<tr>
+								<td align="left" class="field-wrap"><label>Account Name:</label> <font color='red'> *
+								</font></td>
+
+								<td align="left"><input type="text" name="AccountName"
+									id="AccountName" placeholder="" style="width:300px;" required /></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td align="left"><label>DUID:</label></td><td align="left"><input type="text" name="DUID" id="DUID" maxlength="7"
+									onkeypress="return isNumber(event)" style="width: 300px">
+									
+									</td></tr>
+								<tr>	
+								<!-- <td></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> -->	
+								<td><label>PID:</label><font color='red' id = "pidmand">
+										* </font></td><td align="left"><input type="text" name="Pid" id="Pid" maxlength="6"
+									onkeypress="return isNumber(event)" style="width: 300px"></td>	
+
+							    </tr>
+
+							<tr>
+								<td align="left"><label>Requested By:</label> <font color='red'> *
+								</font></td>
+
+								<td align="left"><input type="text" name="RequestedBy"
+									id="RequestedBy" placeholder="Enter CEC ID" style="width:300px;" required /></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>		
+								<td align="left"><label>Task:</label> <font color='red' id = "taskmand">* </font></td><td align="left"><input type="text" name="Task" id="Task" style=" width:300px"></td>
+							</tr>
+	
+							<tr>
+								
+								<td align="left"><label>Delivery Model:</label><font color='red'>
+										* </font></td>
+								<td align="left"><select name="DeliveryModel"
+									id="DeliveryModel" style="width:320px" required>
+										<option selected="selected" value="" style="display: none;"
+											disabled="disabled">Select</option>
+										<option value="E2E">E2E</option>
+										<option value="NES">NES</option>
+										<option value="OND">OND</option>
+										<option value="SPOC">SPOC</option>
+										<option value="Other">Other</option>
+								</select></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td align="left"><label>CAP Id:</label></td>
+								<td align="left"><input type="text" name="CapId" id="CapId"	 style="width:300px" placeholder="" onblur="makePIDTaskmandatory();" /></td>
+							</tr>
+							
+							<tr><td colspan="100%">
+								<br />
+								<hr />
+								<br />
+							</td>	
+							</tr>
+						</tbody>
+					</table>
+
+</div>
+
+<%-- General Info href ends--%> 
+
+<%-- Inter GDC GOvernance href starts--%> 
+<div id="igg">
+
+<%--Adding the block Inter GDC Governence --%>
+
+<table>
+						<tr>
+							<th class="theader">Inter GDC Governance</th>
+							<td><br />
+							<br /></td>
+						</tr>
+						<tbody>
+						<input type="text" name="mailer" id="mailer" style="display:none;"/>
+							<!-- <tr><td colspan="100%" ></td></tr> -->
+				
+					
+				
+						
+							<tr class="requirements">
+								<td align="left"><label>Regulatory Requirements:</label><font color='red'>
+										* </font></td>
+
+								<td align="left"><input type="radio"
+									name="RegulatoryRequirements" id="RegulatoryRequirements"
+									value="on"
+									onchange="check('yes','RegulatoryRequirementstext');setServiceOwner();" required>YES
+									<input type="radio" name="RegulatoryRequirements"
+									id="RegulatoryRequirements" value="off" checked
+									onchange="check('no','RegulatoryRequirementstext');setServiceOwner();">NO
+									<input type="text" name="RegulatoryRequirementstext"
+									id="RegulatoryRequirementstext"
+									style="display: none; width: 150px;"
+									maxlength="1000"></td>
+							</tr>
+
+							<tr class="requirements">
+								<td align="left"><label>Language Requirements : </label><font color='red'>
+										* </font></td>
+
+								<td align="left"><input type="radio"
+									name="LanguageRequirements" id="LanguageRequirements"
+									value="on" onchange="check('yes','LanguageRequirementstext');setServiceOwner();"
+									required>YES <input type="radio"
+									name="LanguageRequirements" id="LanguageRequirements"
+									value="off" checked onchange="check('no','LanguageRequirementstext');setServiceOwner();">NO
+									<select name="LanguageRequirementstext" id="LanguageRequirementstext" style="display:none; width: 200px;">
+									<option selected="selected" value="" style="display: none;"
+											disabled="disabled">Select 'NO' for English</option>
+									<option value="Spanish">Spanish</option>
+									<option value="Portugese">Portugese</option>
+									<option value="German">German</option>
+									<option value="Polish">Polish</option>
+									<option value="French">French</option>
+									<option value="Mandarin">Mandarin</option>
+									<option value="Korean">Korean</option>
+									<option value="Japanese">Japanese</option>
+									</select></td>
+							</tr>
+
+							<tr class="requirements">
+								<td align="left"><label>Timezone Requirements :</label><font color='red'>
+										* </font></td>
+
+								<td align="left"><input type="radio"
+									name="TimeZoneRequirements" id="TimeZoneRequirements"
+									value="on" onchange="check('yes','TimeZoneRequirementstext');setServiceOwner();"
+									required>YES <input type="radio"
+									name="TimeZoneRequirements" id="TimeZoneRequirements"
+									value="off" checked onchange="check('no','TimeZoneRequirementstext');setServiceOwner();">NO
+									<select name="TimeZoneRequirementstext"
+									id="TimeZoneRequirementstext"
+									style="display: none; width: 200px;">
+									<option selected="selected" value="" style="display: none;"
+											disabled="disabled">Select NO for Bangalore GDC</option>
+										<option value="(GMT -12:00) Eniwetok, Kwajalein">(GMT
+											-12:00) Eniwetok, Kwajalein</option>
+										<option value="(GMT -11:00) Midway Island, Samoa">(GMT
+											-11:00) Midway Island, Samoa</option>
+										<option value="(GMT -10:00) Hawaii">(GMT -10:00)
+											Hawaii</option>
+										<option value="(GMT -9:00) Alaska">(GMT -9:00)
+											Alaska</option>
+										<option value="(GMT -8:00) Pacific Time">(GMT -8:00)
+											Pacific Time</option>
+										<option value="(GMT -7:00) Mountain Time">(GMT -7:00)
+											Mountain Time</option>
+										<option value="(GMT -6:00) Central Time, Mexico City">(GMT
+											-6:00) Central Time, Mexico City</option>
+										<option value="(GMT -5:00) Eastern Time , Bogota, Lima">(GMT
+											-5:00) Eastern Time , Bogota, Lima</option>
+										<option value="(GMT -4:00) Atlantic Time, Caracas, La Paz">(GMT
+											-4:00) Atlantic Time, Caracas, La Paz</option>
+										<option value="(GMT -3:30) Newfoundland">(GMT -3:30)
+											Newfoundland</option>
+										<option value="(GMT -3:00) Brazil, Buenos Aires, Georgetown">(GMT
+											-3:00) Brazil, Buenos Aires, Georgetown</option>
+										<option value="(GMT -2:00) Mid-Atlantic">(GMT -2:00)
+											Mid-Atlantic</option>
+										<option value="(GMT -1:00 hour) Azores, Cape Verde Islands">(GMT
+											-1:00 hour) Azores, Cape Verde Islands</option>
+										<option
+											value="(GMT) Western Europe Time, London, Lisbon, Casablanca">(GMT)
+											Western Europe Time, London, Lisbon, Casablanca</option>
+										<option
+											value="(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris">(GMT
+											+1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+										<option value="(GMT +2:00) Kaliningrad, South Africa">(GMT
+											+2:00) Kaliningrad, South Africa</option>
+										<option
+											value="(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg">(GMT
+											+3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+										<option value="(GMT +3:30) Tehran">(GMT +3:30) Tehran</option>
+										<option value="(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi">(GMT
+											+4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+										<option value="(GMT +4:30) Kabul">(GMT +4:30) Kabul</option>
+										<option
+											value="(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent">(GMT
+											+5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+										
+										<option value="(GMT +5:45) Kathmandu">(GMT +5:45)
+											Kathmandu</option>
+										<option value="(GMT +6:00) Almaty, Dhaka, Colombo">(GMT
+											+6:00) Almaty, Dhaka, Colombo</option>
+										<option value="(GMT +7:00) Bangkok, Hanoi, Jakarta">(GMT
+											+7:00) Bangkok, Hanoi, Jakarta</option>
+										<option
+											value="(GMT +8:00) Beijing, Perth, Singapore, Hong Kong">(GMT
+											+8:00) Beijing, Perth, Singapore, Hong Kong</option>
+										<option
+											value="(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk">(GMT
+											+9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+										<option value="(GMT +9:30) Adelaide, Darwin">(GMT
+											+9:30) Adelaide, Darwin</option>
+										<option
+											value="(GMT +10:00) Eastern Australia, Guam, Vladivostok">(GMT
+											+10:00) Eastern Australia, Guam, Vladivostok</option>
+										<option
+											value="(GMT +11:00) Magadan, Solomon Islands, New Caledonia">(GMT
+											+11:00) Magadan, Solomon Islands, New Caledonia</option>
+										<option
+											value="(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka">(GMT
+											+12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+										<option value="Others">Others</option>
+										
+								</select></td>
+							</tr>
+
+							<tr class="requirements">
+								<td align="left"><label>Expertise Requirement:</label> <font color='red'>
+										* </font></td>
+
+								<td align="left"><input type="radio"
+									name="ExpertiseRequirements" id="ExpertiseRequirements"
+									value="on" onchange="check('yes','ExpertiseRequirementstext');setServiceOwner();"
+									required>YES <input type="radio"
+									name="ExpertiseRequirements" id="ExpertiseRequirements"
+									value="off" checked onchange="check('no','ExpertiseRequirementstext');setServiceOwner();">NO
+									<input type="text" name="ExpertiseRequirementstext"
+									id="ExpertiseRequirementstext"
+									style="display: none; width: 150px;"
+									maxlength="1000"></td>
+							</tr>
+							<tr>
+								<td align="left"><label>Theatre:</label> <font color='red'> * </font></td>
+								<td align="left"><select name="Theatre" id="Theatre"
+									onchange="SetDeliveryTeam(this);setServiceOwner();" style="width: 300px;" required>
+										<option selected="selected" value="" style="display: none;"
+											disabled="disabled">Select</option>
+										<option value = "GSP">GSP</option>
+										<option value = "Enterprise and GES">Enterprise and GES</option>
+										<option value = "Americas Enterprise">Americas Enterprise</option>
+										<option value="EMEAR">EMEAR</option>
+										<option value="APJC">APJC</option>
+										<option value="US Public Sector">US Public Sector</option>
+									</select></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td align="left"><label>Region:</label> <font color='red'> * </font></td>
+								<td align="left"><select name="Region" style="width: 320px;" onchange="setServiceOwner();" id="Region" required>
+										<option selected="selected" value="" style="display: none;"
+											disabled="disabled">Select</option>
+										<option value="US West">US West</option>
+										<option value="US East">US East</option>
+										<option value="US South">US South</option>
+										<option value="US Central">US Central</option>
+										<option value="LATAM">LATAM</option>
+										<option value="Canada">Canada</option>
+
+								</select></td>
+							</tr>
+							<tr>
+								<td align="left"><label>Deliverable Classification:</label> <font
+									color='red'> * </font></td>
+								<td align="left"><select name="DeliverableClassification"
+									id="DeliverableClassification"
+									onchange="SetClassification(this);setServiceOwner()" style="width: 300px;" required>
+										<option selected="selected" value="" style="display: none;"
+											disabled="disabled">Select</option>
+										<option value="SORA">SORA</option>
+										<option value="NP/NPA/NHF">NP/NPA/NHF</option>
+										<option value="Cisco Network Assessment">Cisco Network Assessment</option>
+										<option value="Deployment Services">Deployment Services</option>
+										<option value="Design Services">Design Services</option>
+										<option value="Other Deliverables">Other Deliverables</option>
+								</select></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td align="left"><label>Theatre Owner/Manager:</label></td>
+								<td align="left"><input type="text" name="ServiceOwner"
+									id="ServiceOwner" placeholder="" style="width: 300px;"/></td>
+							</tr>
+							<tr>
+								<td align="left"><label>GSP GDC:</label> <font color='red'> * </font></td>
+								<td align="left">
+								<select  name="GDC" id="GDC" style="width: 300px;" required>
+									<option selected="selected" value="" style="display: none;" disabled="disabled" >Select</option>
+										<option value="Bangalore">Bangalore</option>
+										<option value="Dalian">Dalian</option>
+										<option value="Krakow">Krakow</option>
+										<option value="Mexico">Mexico</option>
+										<option value="RTP">RTP</option>
+								</select></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td align="left"><label>Service Catalogue ID:</label></td>
+								<td align="left"><input type="text"
+									name="ServiceCatalogueID" style="width: 300px;" id="ServiceCatalogueID"
+									placeholder="" /></td>
+
+							</tr>
+							<tr>
+								<td align="left"><label>If changing GDC/Service Owner please</label> <br/><label>provide reasons:</label></td>
+								<td align="left"><textarea rows="4" cols="26"
+										style="overflow-y: scroll; width: 300px; height: 125px"
+										onKeyDown="charLimit(this.form.ChangingGDC,this.form.countdown,3999);"
+										name="ChangingGDC" id="ChangingGDC" placeholder=""></textarea></td>
+							</tr>
+							<tr><td colspan="100%"><br/></td></tr>
+							<tr>
+							<td colspan ="100%" align="right"><a href="http://iwe.cisco.com/web/view-post/post/-/posts?postId=438800099" target="_blank">GSP Inter GDC Engagement :  http://iwe.cisco.com/web/view-post/post/-/posts?postId=438800099</a></td>
+							</tr>
+							<tr><td colspan="100%">
+								<br />
+								<hr />
+								<br />
+							</td>	
+							</tr>
+
+
+						</tbody>
+					</table>
+
+
+<%--Ending the block Inter GDC Governance --%>
+
+</div>
+<%-- Inter GDC Governence href ends--%> 
+
+<%--Work Assignment Starts --%>
+
+<div id="wat">
+
+<table class="Div10" name="Div10" id="Div10">
+						<tr>
+							<th class="theader">Work Assignment</th>
+							<td><br />
+							<br /></td>
+						</tr>
+						<tr>
+							<td align="left"><label>Assignee:</label></td>
+							<td align="left"><select name="Assignee" id="Assignee" style="width:300px">
+									<option value='Incomplete,noreply'>Select</option>
+							</select></td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td align="left"><label>Created Date:</label></td>
+							<td align="left"><input type="text" 
+								name="CreatedDate" id="CreatedDate" style="width:300px" readonly /></td>
+						</tr>
+						<tr>	
+							<td align="left"><label>Resource Assigned Date:</label></td>
+							<td align="left"><input type="text" class="date"
+								name="ResourceAssignedDate" id="ResourceAssignedDate"
+								placeholder="Resource Assigned Date" style="width:280px"/></td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td align="left"><label>Start Date:</label></td>
+							<td align="left"><input class="date" type="text"
+								placeholder="Project Start Date" name="StartDate" style="width:300px" id="StartDate" />
+							</td>
+						</tr>
+						<tr>	
+							<td align="left"><label>Estimated Hours:</label></td>
+							<td><input type="text" name="EstimatedHours"
+								id="EstimatedHours" placeholder=".. in hours" style="width:280px"></td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td align="left"><label>Due Date:</label></td>
+							<td align="left"><input type="text" class="date"
+								name="DueDate" id="DueDate" placeholder="Due date" style="width:300px"/></td>
+						</tr>
+						<tr>
+							<td align="left"><label>Status:</label></td>
+							<td align="left"><select name="ProjStatus" id="ProjStatus" style="width:300px">
+									<option value="Open">Open</option>
+									
+							</select></td>
+						</tr>
+						
+						<tr><td> <input type="date" /><br/></td></tr>
+						<tr>
+							<td colspan="100%" align="left"><label>Please use the text box below to provide Special Comments about the project(Max 10000 characters).</label>
+							</td>
+							</tr>
+						<tr>
+							<td><br /></td>
+						</tr>
+						<tr>
+							<td colspan='100%'><textarea rows="10" cols="100"
+									name="SpecialComments" id="SpecialComments" placeholder="SpecialComments"
+									onKeyDown="charLimit(this.form.SpecialComments,this.form.countdown,10000);"
+									style="overflow-y: scroll; width: 100%; height: 200px"></textarea>
+							</td>
+
+						</tr>
+						<tr><td colspan="100%">
+								<br />
+								<hr />
+								<br />
+							</td>	
+							</tr>
+					</table>
+					
+					<br>
+
+
+</div>
+
+<%--Work Assignment Ends ---%>
+
+<%--Golden Rule Document --%>
+<div id="grr">
+
+<table class="Div9" name="Div9" id="Div9">
+						<tr>
+							<th class="theader" style="text-align: left">Golden Rules</th>
+							<td><br />
+							<br /></td>
+						</tr>
+						<tr>
+							<td><label>Please use the text box to either provide a link to
+								Golden Rules or to detail in free text the Golden Rules to be
+								followed.(Max 10000 characters)</label></td>
+						</tr>
+						<tr>
+							<td><br /></td>
+						</tr>
+						<tr>
+							<td colspan='100%'><textarea rows="10" cols="100"
+									name="Golden" id="Golden"
+									onKeyDown="charLimit(this.form.Golden,this.form.countdown,10000);"
+									style="overflow-y: scroll; width: 100%; height: 200px"></textarea>
+							</td>
+
+						</tr>
+						<tr><td colspan="100%">
+								<br />
+								<hr />
+								<br />
+							</td>	
+							</tr>
+					</table>
+					<table class="attachments" id="attachfiles">
+						<tbody>
+						<tr>
+							<th class="theader" align="left">Attachments (Max File size 25MB per file )</th>
+							<td><br />
+							<br /></td>
+						</tr>
+							<tr>
+								<td><INPUT NAME="file0" TYPE="file" id="attachment0" /></td>
+								<td><button type="button" class="button button-block onclick="addMore()"><label>Add
+										Files</label></button></td>
+								<!-- <td><button type="button" onclick="removeFiles()">Remove Files</button></td> -->
+							</tr>
+							<tr><td><input type="hidden" name="x" value=0 id="x">
+							</td>
+							</tr>
+
+						</tbody>
+					</table>
+					
+					<table class="submit" id="submitDiv">
+						<tr>
+							<td colspan="2">
+							<input type="hidden" name="existingHwNew" value="Y" />
+							<input type="submit" value="submit"
+								onClick="return validate_form();"
+								style="float: right; top: 10px; position: relative;" /></td>
+						</tr>
+					</table>
+					
+
+</div>
+<%--Golden Rule Requirements Ends --%>
+
+<%--Attachments Starts --%>
+
+<%--Attachments Ends --%>
+<%-- <div id ="login1">
 	<div>
 
 		<div style="width: 80%; background: white">
-			<form name="form" id="form" method="post" action="NewEntry" onkeypress="return event.keyCode != 13;" enctype='multipart/form-data'>
+			
 
 				<div class="login"
 					style="float: left; margin-left: 10%; border-right: 1px solid grey; border-left: 1px solid grey; width: 100%; background: white">
 					<h1>Enter Project Details</h1>
 					
-					<%-- adding owner transition by state by shivam--%> 
+					adding owner transition by state by shivam 
 					
 					<table class="status" id='status'>
 						<tr>
@@ -1715,16 +2214,7 @@ function setServiceOwner(){
 							<tr>
 								<td align="left">Owner: <font color='red'>
 										* </font></td>
-								<td align="left"><select name="Owner"
-									id="Owner" style="width:320px" required>
-										<option selected="selected" value="" style="display: none;"
-											disabled="disabled">Select</option>
-										<option value="staffer">staffer</option>
-										<option value="requester">requester</option>
-										<option value="screener">screener</option>
-										<option value="PNCE">PNCE</option>
-										<option value="reviewer">reviewer</option>
-								</select></td>
+								<td align="left"></td>
 								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 								</tr>
 								<tr>
@@ -1776,7 +2266,9 @@ function setServiceOwner(){
 					
 						
 							
-				<%-- ending shivam code--%> 
+				ending shivam code 
+				
+				Division 1 Start 
 					
 					<table>
 						<tr>
@@ -1787,6 +2279,10 @@ function setServiceOwner(){
 						<tbody>
 						<input type="text" name="mailer" id="mailer" style="display:none;"/>
 							<!-- <tr><td colspan="100%" ></td></tr> -->
+				
+					
+				
+						
 							<tr class="requirements">
 								<td align="left">Regulatory Requirements:<font color='red'>
 										* </font></td>
@@ -2041,16 +2537,13 @@ function setServiceOwner(){
 									
 									</td></tr>
 								<tr>	
-								<td align="left">Account NCE Name: <font color='red'>
-										* </font></td>
-								<td align="left"><input type="text" name="AccountNCEName"
-									id="AccountNCEName" placeholder="Enter CEC ID"  style="width:300px;" required></td>
+								<td align="left"></td>
 								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>	
 								<td>PID: <font color='red' id = "pidmand">
-										* </font></td><td align="left"><input type="text" name="Pid" id="Pid" placeholder="Input PID and Press ENTER" maxlength="6"
-									onkeypress="return isValid(event)" style="width: 300px"></td>	
+										* </font></td><td align="left"><input type="text" name="Pid" id="Pid" maxlength="6"
+									onkeypress="return isNumber(event)" style="width: 300px"></td>	
 
-							</tr>
+							    </tr>
 
 							<tr>
 								<td align="left">Requested By: <font color='red'> *
@@ -2615,6 +3108,8 @@ function setServiceOwner(){
 
 
 					<!--Division 10 Work Assignment -->
+					
+				
 					<table class="Div10" name="Div10" id="Div10">
 						<tr>
 							<th class="theader">Work Assignment</th>
@@ -2681,6 +3176,7 @@ function setServiceOwner(){
 							</td>	
 							</tr>
 					</table>
+					
 					<br>
 					
 					<table class="attachments" id="attachfiles">
@@ -2713,17 +3209,23 @@ function setServiceOwner(){
 					</table>
 				
 		</div>
-		</form>
+ --%>		</form>
 	</div>
 	</div>
-<script type="text/javascript">
+	
+	
+	</div>
+	</div>
+	</div>
+<!--  <script type="text/javascript">
 $(function(){
    $(".chzn-select").chosen({search_contains:true});
     
     });
-</script>
+</script>-->
+ <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-
+        <script src="js/index.js"></script>
 </body>
 
 

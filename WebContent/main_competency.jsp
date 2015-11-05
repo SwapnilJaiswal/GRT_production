@@ -59,6 +59,7 @@
 		<cues:drawer id="layout_sample_drawer1" title="Enter Project Details" state="" mode="tree" >
 			<cues:draweritem text="Enter New Project Details" onclick="HardwarePids" target="contentiframe" appdata="'name':'query_form'" default="true" />
 			<cues:draweritem text="View Project Details" onclick="Display" target="contentiframe" appdata="'name':'query_form'" default="true" />
+			
 			<cues:draweritem text="Export Project Details" onclick="Export" target="contentiframe" appdata="'name':'query_form'" default="true" />
 			
 		</cues:drawer>
