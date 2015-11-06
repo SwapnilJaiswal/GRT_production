@@ -4,6 +4,15 @@
 <%@page import="java.util.ArrayList" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<script>
+function pop()
+{
+	var s = document.getElementById("NewState").value;
+	var o = document.getElementById("NewOwner").value;
+ alert(s+" "+o);   
+}
+</script>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Competency</title>
@@ -1182,7 +1191,7 @@ function isNumber(evt) {
 				$("#ResourceAssignedDate").val(jsonObj.ResourceAssignedDate);
 				$('#form input').attr('readonly', 'readonly');
 				$('#form textarea').attr('readonly', 'readonly');
-				$('#form select').attr('disabled','disabled');
+				//$('#form select').attr('disabled','disabled');
 				$("#Owner").val(jsonObj.Owner).prop('selected',true);
 				$("#TransitionBy").val(jsonObj.TransitionBy).prop('selected',true);
 				$("#State").val(jsonObj.State).prop('selected',true);
@@ -2326,10 +2335,9 @@ ul {
   width: 150px;
 }
 
-
-
-
 </style>
+
+
 <script  >
 var idVal= 0;
 var statename;
@@ -2338,12 +2346,12 @@ var transition="not defined";
 var info="cool lagate hai "
 
 function statenamebyid(id) {
-  var states = ["Open","Staffing","Screening","Brp","Queued","Assigned","Query-rerun","In-progress","Review","Review-done","Delivered","Completed"];
+  var states = ["Open","Pending","Staffing","Screening","Brp","Queued","Assigned","Query-rerun","In-progress","Review","Review-done","Delivered","Completed"];
     return states[id-1];
 }
 
 function getidbystatename(name) {
-  var states = ["Open","Staffing","Screening","Brp","Queued","Assigned","Query-rerun","In-progress","Review","Review-done","Delivered","Completed"];
+  var states = ["Open","Pending","Staffing","Screening","Brp","Queued","Assigned","Query-rerun","In-progress","Review","Review-done","Delivered","Completed"];
     return states.indexOf(name)+1;
 }
 
@@ -2384,6 +2392,10 @@ function mycurrentsituation() {
    
    }
 </script>
+
+
+
+
 
 </head>
 
@@ -2450,7 +2462,7 @@ function mycurrentsituation() {
   
 </div>
 </div>	
-					
+				
 					<table class="status" id='status'>
 						<tr>
 							<th class="theader">Status</th>
@@ -2462,8 +2474,8 @@ function mycurrentsituation() {
 							<tr>
 								<td align="left">Owner: <font color='red'>
 										* </font></td>
-								<td align="left"><select name="Owner"
-									id="Owner" style="width:320px" required>
+								<td align="left"><select name="NewOwner"
+									id="NewOwner" style="width:200px" required>
 										<option selected="selected" value="" style="display: none;"
 											disabled="disabled">Select</option>
 										<option value="staffer">staffer</option>
@@ -2473,29 +2485,17 @@ function mycurrentsituation() {
 										<option value="reviewer">reviewer</option>
 								</select></td>
 								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-								</tr>
-								<tr>
-								<td align="left">Transition by: <font color='red'>
-										* </font></td>
-								<td align="left"><select name="TransitionBy"
-									id="TransitionBy" style="width:320px" required>
-										<option selected="selected" value="" style="display: none;"
-											disabled="disabled">Select</option>
-										<option value="staffer">staffer</option>
-										<option value="requester">requester</option>
-										<option value="screener">screener</option>
-										<option value="PNCE">PNCE</option>
-										<option value="reviewer">reviewer</option>
-								</select></td>
+
 								
 								<td align="left">State: <font color='red'>
 										* </font></td>
 								<td align="left"><select name="State"
-									id="State" style="width:320px" required>
+									id="NewState" style="width:200px" required>
 										<option selected="selected" value="" style="display: none;"
 											disabled="disabled">Select</option>
 										<option value="New">NEW</option>
 										<option value="Open">OPEN</option>
+										<option value="Pending">PENDING</option>
 										<option value="Staffing">STAFFING</option>
 										<option value="Screening">SCREENING</option>
 										<option value="Brp">BRP</option>
@@ -2509,9 +2509,16 @@ function mycurrentsituation() {
 										<option value="Completed">COMPLETED</option>
 								</select></td>							
 							</tr>
-							
-							
-							
+							<tr>
+					
+					<td align="center">
+					
+				<!--  <input type="button" name="State Change" onClick="pop()" value="State Change">  -->
+				<button value="State Change" onclick="pop()"></button>
+				
+							</td>
+							</tr>
+												
 							<tr><td colspan="100%">
 								<br />
 								<hr />
@@ -2526,7 +2533,7 @@ function mycurrentsituation() {
 				<%-- ending shivam code--%> 
                 
                 
-                <table style="width:100%%">
+                <table style="width:100%">
                     <tbody>
                     <input type="hidden" id="SNo1" name="SNo1" value=""/>
 						
